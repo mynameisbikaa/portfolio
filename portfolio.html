@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Electrical & Electronics Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #e31c23;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--white);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, #2d2d2d 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect fill="none" stroke="rgba(227,28,35,0.1)" stroke-width="1" x="0" y="0" width="100" height="100"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--primary);
+            margin: 0 auto 1.5rem;
+            display: block;
+            object-fit: cover;
+            background: var(--gray);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1rem;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        nav {
+            background: var(--white);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+        }
+
+        .section-intro {
+            color: var(--gray);
+            margin: 2rem 0 3rem;
+            font-size: 1.1rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+        }
+
+        .project-card p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: rgba(227,28,35,0.1);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .experience-item {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .experience-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-meta {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.6rem 0;
+            color: var(--gray);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .achievement-card {
+            background: var(--light);
+            padding: 1.8rem;
+            border-radius: 12px;
+            border-top: 3px solid var(--primary);
+        }
+
+        .achievement-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .achievement-card p {
+            color: var(--gray);
+        }
+
+        .contact-section {
+            background: var(--dark);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .contact-btn:hover {
+            background: #c41218;
+            transform: translateY(-2px);
+        }
+
+        .contact-btn.secondary {
+            background: transparent;
+            border: 2px solid var(--white);
+        }
+
+        .contact-btn.secondary:hover {
+            background: var(--white);
+            color: var(--dark);
+        }
+
+        footer {
+            background: #0a0a0a;
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .container {
+                padding: 3rem 1.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <!-- Replace with your photo -->
+            <img src="your-photo.jpg" alt="Your Name" class="profile-img">
+            <h1>Your Name</h1>
+            <p class="subtitle">Electrical & Electronics Engineering Student</p>
+            <p class="tagline">Fabrication Lab Instructor | IoT & Embedded Systems Enthusiast | 3x Hackathon Participant</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="section-intro">
+                I'm a third-year Electrical & Electronics Engineering student with a passion for hands-on innovation and fabrication. 
+                Through my work as a fabrication lab instructor and participation in multiple hackathons, I've developed strong skills 
+                in rapid prototyping, IoT systems, and collaborative problem-solving. I'm excited to bring my technical expertise and 
+                creative approach to challenging research projects at EPFL's E3 program.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <p class="section-intro">A selection of my hands-on engineering projects showcasing prototyping, embedded systems, and IoT applications.</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="video-placeholder">
+                        📹 Your Arduino/IoT Project Video<br>
+                        (Replace with actual video/image)
+                    </div>
+                    <div class="project-content">
+                        <h3>IoT Home Automation System</h3>
+                        <p>Developed a smart home system using ESP32 and various sensors to control lighting, temperature, and security remotely through a mobile app.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Arduino</span>
+                            <span class="tag">ESP32</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">MQTT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="video-placeholder">
+                        📹 Your 3D Printing Project<br>
+                        (Replace with actual video/image)
+                    </div>
+                    <div class="project-content">
+                        <h3>Custom 3D Printed Robotic Arm</h3>
+                        <p>Designed and fabricated a 4-DOF robotic arm with custom 3D printed parts, servo control, and inverse kinematics for precise movement.</p>
+                        <div class="tech-tags">
+                            <span class="tag">3D Printing</span>
+                            <span class="tag">CAD</span>
+                            <span class="tag">Servo Control</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="video-placeholder">
+                        📹 Your 2D Design Project<br>
+                        (Replace with actual video/image)
+                    </div>
+                    <div class="project-content">
+                        <h3>Laser Cut Circuit Board Organizer</h3>
+                        <p>Created parametric designs for custom circuit board storage solutions using 2D CAD and laser cutting techniques at the fabrication lab.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Laser Cutting</span>
+                            <span class="tag">2D CAD</span>
+                            <span class="tag">Fabrication</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="video-placeholder">
+                        📹 Your Hackathon Project<br>
+                        (Replace with actual video/image)
+                    </div>
+                    <div class="project-content">
+                        <h3>Hackathon Winner: Smart Energy Monitor</h3>
+                        <p>Built a real-time energy consumption monitoring system in 24 hours that helps users reduce electricity costs through ML-powered insights.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Raspberry Pi</span>
+                            <span class="tag">Sensors</span>
+                            <span class="tag">Data Analytics</span>
+                            <span class="tag">Web Dev</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Fabrication Lab Instructor</h3>
+                <p class="experience-meta">University Fab Lab | [Start Date] - Present</p>
+                <p>Instruct students and researchers on digital fabrication tools including 3D printers, laser cutters, and CNC machines. Provide technical guidance on project design, prototyping techniques, and safety procedures. Maintain and troubleshoot fabrication equipment.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Seeds for the Future Program Participant</h3>
+                <p class="experience-meta">Huawei | [Year]</p>
+                <p>Selected for prestigious technology and leadership program. Gained exposure to cutting-edge telecommunications technology, 5G networks, and cloud computing. Collaborated with international peers on technical challenges.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Exchange Program</h3>
+                <p class="experience-meta">[University Name] | [Semester/Year]</p>
+                <p>Completed coursework in advanced electronics and embedded systems. Engaged with international faculty and students, broadening technical perspective and cultural competency.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Tools</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming & Software</h3>
+                    <ul class="skill-list">
+                        <li>C/C++ (Arduino, Embedded)</li>
+                        <li>Python (Data Analysis, ML)</li>
+                        <li>MATLAB/Simulink</li>
+                        <li>Git & Version Control</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Hardware & Electronics</h3>
+                    <ul class="skill-list">
+                        <li>Arduino & ESP32</li>
+                        <li>Circuit Design & PCB Layout</li>
+                        <li>Sensors & Actuators</li>
+                        <li>Oscilloscope & Multimeter</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Fabrication & Prototyping</h3>
+                    <ul class="skill-list">
+                        <li>3D Printing (FDM, SLA)</li>
+                        <li>Laser Cutting & Engraving</li>
+                        <li>CAD (Fusion 360, SolidWorks)</li>
+                        <li>Rapid Prototyping</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Communication & IoT</h3>
+                    <ul class="skill-list">
+                        <li>MQTT, HTTP, WebSockets</li>
+                        <li>Wi-Fi & Bluetooth</li>
+                        <li>Sensor Networks</li>
+                        <li>Cloud Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements & Activities</h2>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <h3>🏆 Hackathon Participation</h3>
+                    <p>Participated in 3 major hackathons with successful project deployments. Winner of [Hackathon Name] for innovative IoT solution.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <h3>🔧 Makeathon Projects</h3>
+                    <p>Built functional prototypes under time constraints, demonstrating rapid problem-solving and hands-on fabrication skills.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <h3>📚 Relevant Coursework</h3>
+                    <p>Excelled in Digital Electronics, Microprocessors, Control Systems, and Signal Processing with [GPA/Grade].</p>
+                </div>
+
+                <div class="achievement-card">
+                    <h3>🌍 International Programs</h3>
+                    <p>Seeds for the Future & Exchange Program participant. Developed cross-cultural collaboration and communication skills.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <h3>🎓 Academic Excellence</h3>
+                    <p>Maintained strong academic performance with focus on practical applications. Current GPA: [Your GPA]</p>
+                </div>
+
+                <div class="achievement-card">
+                    <h3>👥 Leadership & Teaching</h3>
+                    <p>Trained 50+ students in fabrication techniques as lab instructor. Mentored peers in electronics projects.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="contact-section" id="contact">
+        <h2 style="color: white; margin-bottom: 1rem;">Let's Connect</h2>
+        <p style="max-width: 600px; margin: 0 auto 2rem; color: rgba(255,255,255,0.8);">
+            I'm actively seeking internship opportunities where I can apply my skills in embedded systems and fabrication. 
+            Feel free to reach out!
+        </p>
+        <div class="contact-links">
+            <a href="mailto:your.email@example.com" class="contact-btn">Email Me</a>
+            <a href="https://linkedin.com/in/yourprofile" class="contact-btn secondary" target="_blank">LinkedIn</a>
+            <a href="https://github.com/yourusername" class="contact-btn secondary" target="_blank">GitHub</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Your Name. Built for EPFL E3 Internship Application.</p>
+    </footer>
+</body>
+</html>
