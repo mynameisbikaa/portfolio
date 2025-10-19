@@ -1,485 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aibike Moldobaeva - Electrical & Electronics Engineer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aibike Moldobaeva — Electrical & Electronics Engineer</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        :root{
             --primary: #e31c23;
-            --dark: #1a1a1a;
-            --light: #f8f9fa;
-            --gray: #6c757d;
-            --white: #ffffff;
+            --dark: #111;
+            --light: #f6f7f9;
+            --muted: #6c757d;
+            --white: #fff;
+            --max-width: 1200px;
         }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-            line-height: 1.6;
+        body{
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
             color: var(--dark);
             background: var(--white);
+            line-height: 1.5;
         }
-        header {
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.75) 0%, rgba(45, 45, 45, 0.75) 100%), 
-                        url(header-background.HEIC) center/cover no-repeat;
-            color: var(--white);
-            padding: 4rem 2rem;
-            text-align: center;
+
+        /* ========== HEADER ========== 
+           TODO: Replace 'header-background.jpg' with your actual background photo
+           (place it in the same folder as index.html) */
+        header{
+            min-height: 360px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            padding:48px 20px;
+            background: linear-gradient(135deg, rgba(26,26,26,0.7), rgba(45,45,45,0.7)), url('header-background.jpg') center/cover no-repeat;
+            color: #fff;
             position: relative;
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.2);
-            z-index: 0;
+        .header-content{ max-width: var(--max-width); margin: 0 auto; z-index:1; }
+        
+        /* TODO: Replace 'images/aibike-profile.jpg' with your profile photo */
+        .profile-img{
+            width:160px; height:160px; border-radius:50%; object-fit:cover;
+            border:4px solid var(--primary); display:block; margin:0 auto 16px; background:#eaeaea;
         }
-        .header-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 5px solid var(--primary);
-            margin: 0 auto 1.5rem;
-            display: block;
-            object-fit: cover;
-            background: var(--gray);
-        }
-        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; font-weight: 700; }
-        .subtitle { font-size: 1.3rem; color: rgba(255,255,255,0.9); margin-bottom: 1rem; }
-        .tagline { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto; }
-        nav {
+        h1{ font-size:2rem; margin-bottom:6px; font-weight:700; }
+        .subtitle{ opacity:0.95; margin-bottom:8px; }
+        .tagline{ opacity:0.9; max-width:720px; margin: 0 auto; }
+
+        nav{
             background: var(--white);
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
             position: sticky; top: 0; z-index: 100;
         }
-        nav ul {
-            list-style: none;
-            display: flex; justify-content: center;
-            flex-wrap: wrap; gap: 2rem;
-            max-width: 1200px; margin: 0 auto;
-        }
-        nav a {
-            color: var(--dark); text-decoration: none;
-            font-weight: 500; transition: color 0.3s;
-        }
-        nav a:hover { color: var(--primary); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
-        section { margin-bottom: 5rem; }
-        h2 {
-            font-size: 2.2rem; margin-bottom: 0.5rem;
-            color: var(--dark); position: relative; display: inline-block;
-        }
-        h2::after {
-            content: ''; position: absolute; bottom: -8px; left: 0;
-            width: 60px; height: 4px; background: var(--primary);
-        }
-        .section-intro { color: var(--gray); margin: 2rem 0 3rem; font-size: 1.1rem; }
-        .projects-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem; margin-top: 2rem;
-        }
-        .project-card {
-            background: var(--white); border-radius: 12px; overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        nav ul{ display:flex; gap:18px; justify-content:center; list-style:none; padding:12px 20px; flex-wrap:wrap; }
+        nav a{ color:var(--dark); text-decoration:none; font-weight:600; transition: color 0.3s; }
+        nav a:hover{ color:var(--primary); }
+
+        .container{ max-width: var(--max-width); margin: 48px auto; padding: 0 20px; }
+
+        section{ margin-bottom:56px; }
+        h2{ font-size:1.6rem; margin-bottom:12px; display:inline-block; position:relative; }
+        h2::after{ content:''; display:block; height:4px; width:60px; background:var(--primary); margin-top:8px; }
+
+        .section-intro{ color:var(--muted); margin: 12px 0 20px; max-width:900px; }
+
+        /* ========== PROJECTS GRID ========== */
+        .projects-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:18px; }
+        .project-card{ 
+            background:var(--white); 
+            border-radius:12px; 
+            box-shadow:0 6px 18px rgba(0,0,0,0.06); 
+            overflow:hidden;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        .project-card:hover{
+            transform: translateY(-5px);
+            box-shadow:0 10px 25px rgba(0,0,0,0.12);
         }
-        
-        /* Gallery Slider */
-        .gallery-container {
-            position: relative;
-            width: 100%;
-            height: 250px;
-            overflow: hidden;
-            background: #000;
-        }
-        .gallery-slider {
-            display: flex;
-            transition: transform 0.4s ease;
-            height: 100%;
-        }
-        .gallery-item {
-            min-width: 100%;
-            height: 100%;
-            position: relative;
-        }
-        .gallery-item img,
-        .gallery-item video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .project-media{ 
+            width:100%; 
+            height:240px; 
+            background:#000; 
+            display:flex; 
+            align-items:center; 
+            justify-content:center;
             cursor: pointer;
         }
-        .gallery-nav {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-            z-index: 10;
+        .project-media img, .project-media video{ width:100%; height:100%; object-fit:cover; display:block; }
+        .project-content{ padding:16px; }
+        .project-content h3{ margin-bottom: 8px; }
+        .project-content p{ color: var(--muted); line-height: 1.6; }
+        .tech-tags{ display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+        .tag{ 
+            font-size:0.82rem; 
+            padding:6px 10px; 
+            border-radius:18px; 
+            background: rgba(227,28,35,0.08); 
+            color:var(--primary); 
+            font-weight:600; 
         }
-        .gallery-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.5);
-            cursor: pointer;
+
+        /* ========== EXPERIENCE ========== */
+        .experience-item{ 
+            background:var(--light); 
+            padding:18px; 
+            border-radius:10px; 
+            border-left:4px solid var(--primary); 
+            display:flex; 
+            gap:16px; 
+            align-items:flex-start;
+            margin-bottom: 14px;
+        }
+        /* TODO: Add videos/photos to /videos/ and /images/ folders */
+        .exp-media{ 
+            width:320px; 
+            max-width:35%; 
+            min-width:180px; 
+            height:160px; 
+            background:#ddd; 
+            border-radius:8px; 
+            overflow:hidden; 
+        }
+        .exp-media img, .exp-media video{ width:100%; height:100%; object-fit:cover; display:block; }
+        .exp-text{ flex:1; }
+        .exp-text h3{ margin-bottom: 6px; }
+        .experience-meta{ color: var(--muted); font-size: 0.9rem; margin-bottom: 8px; }
+
+        /* ========== SKILLS GRID ========== */
+        .skills-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:12px; margin-top:12px; }
+        .skill-card{ background:var(--white); padding:16px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.03); }
+        .skill-card h4{ margin-bottom: 10px; }
+        .skill-list{ list-style:none; color:var(--muted); margin-top:8px; }
+        .skill-list li{ padding: 4px 0; }
+
+        /* ========== CERTIFICATES ========== 
+           TODO: Combine all certificates into one PDF named 'aibike-certificates.pdf'
+           and place it in /certificates/ folder */
+        .cert-link{ 
+            display:inline-block; 
+            padding:12px 20px; 
+            background:var(--primary); 
+            color: var(--white);
+            border-radius:8px; 
+            text-decoration:none; 
+            font-weight:600;
             transition: background 0.3s;
         }
-        .gallery-dot.active {
-            background: var(--primary);
+        .cert-link:hover{ background: #c41218; }
+
+        /* ========== ACHIEVEMENTS ========== */
+        .achievements-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:12px; }
+
+        /* ========== CONTACT ========== */
+        .contact-section{ background:var(--dark); color:#fff; padding:32px; text-align:center; border-radius:10px; }
+        .contact-links{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:16px; }
+        .contact-btn{ 
+            padding:10px 16px; 
+            border-radius:8px; 
+            text-decoration:none; 
+            font-weight:600; 
+            color:#fff; 
+            background:var(--primary);
+            transition: transform 0.2s, background 0.3s;
         }
-        .gallery-arrow {
+        .contact-btn:hover{ transform: translateY(-2px); background: #c41218; }
+        .contact-btn.secondary{ background:transparent; border:2px solid #fff; color:#fff; }
+        .contact-btn.secondary:hover{ background:#fff; color:var(--dark); }
+
+        /* ========== LIGHTBOX ========== */
+        .lightbox{ 
+            display:none; 
+            position:fixed; 
+            inset:0; 
+            background:rgba(0,0,0,0.9); 
+            align-items:center; 
+            justify-content:center; 
+            z-index:9999; 
+            padding:20px; 
+        }
+        .lightbox.active{ display:flex; }
+        .lightbox-content{ max-width:100%; max-height:100%; position: relative; }
+        .lightbox-content img, .lightbox-content video{ 
+            max-width:100%; 
+            max-height:90vh; 
+            object-fit:contain; 
+            display:block; 
+        }
+        .lightbox-close{
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.5);
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            transition: background 0.3s;
-        }
-        .gallery-arrow:hover {
-            background: rgba(0,0,0,0.8);
-        }
-        .gallery-arrow.prev { left: 10px; }
-        .gallery-arrow.next { right: 10px; }
-        
-        /* Lightbox Modal */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.95);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        .lightbox.active {
-            display: flex;
-        }
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 90%;
-            position: relative;
-        }
-        .lightbox-content img,
-        .lightbox-content video {
-            max-width: 100%;
-            max-height: 90vh;
-            object-fit: contain;
-        }
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            top: -40px;
+            right: 0;
             color: white;
             font-size: 2rem;
             cursor: pointer;
             background: rgba(0,0,0,0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gallery-btn{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.6);
+            color: white;
+            border: none;
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1001;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
         }
-        
-        .project-content { padding: 1.5rem; }
-        .project-card h3 { font-size: 1.4rem; margin-bottom: 0.8rem; color: var(--dark); }
-        .project-card p { color: var(--gray); margin-bottom: 1rem; line-height: 1.6; }
-        .tech-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .tag {
-            background: rgba(227,28,35,0.1); color: var(--primary);
-            padding: 0.3rem 0.8rem; border-radius: 20px;
-            font-size: 0.85rem; font-weight: 500;
-        }
-        .experience-item {
-            background: var(--light); padding: 2rem; border-radius: 12px;
-            margin-bottom: 1.5rem; border-left: 4px solid var(--primary);
-        }
-        .experience-item h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-        .experience-meta { color: var(--gray); font-size: 0.95rem; margin-bottom: 1rem; }
-        .experience-with-media {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            align-items: center;
-        }
-        .experience-text {
-            display: flex;
-            flex-direction: column;
-        }
-        .experience-media {
-            width: 100%;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .experience-media video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .exp-link {
-            display: inline-block;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: color 0.3s;
-        }
-        .exp-link:hover {
-            color: #c41218;
-        }
-        @media (max-width: 768px) {
-            .experience-with-media {
-                grid-template-columns: 1fr;
-            }
-        }
-        .skills-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem; margin-top: 2rem;
-        }
-        .skill-category h3 { font-size: 1.3rem; margin-bottom: 1rem; color: var(--dark); }
-        .skill-list { list-style: none; }
-        .skill-list li {
-            padding: 0.6rem 0; color: var(--gray);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        .skill-list li:last-child { border-bottom: none; }
-        .achievements-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem; margin-top: 2rem;
-        }
-        .achievement-card {
-            background: var(--light); padding: 1.8rem;
-            border-radius: 12px; border-top: 3px solid var(--primary);
-        }
-        .achievement-card h3 { font-size: 1.2rem; margin-bottom: 0.8rem; }
-        .achievement-card p { color: var(--gray); }
-        
-        .certificates-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .certificate-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-top: 4px solid var(--primary);
-        }
-        .certificate-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
-        .cert-logo {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            background: var(--light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-        .cert-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            padding: 0.5rem;
-        }
-        .certificate-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            text-align: center;
-        }
-        .cert-issuer {
-            color: var(--primary);
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-        }
-        .cert-desc {
-            color: var(--gray);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        .cert-link {
-            display: inline-block;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-            width: 100%;
-            text-align: center;
-        }
-        .cert-link:hover {
-            color: #c41218;
-        }
-        
-        .certificates-compact {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 2.5rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            border-left: 5px solid var(--primary);
-            margin-top: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .certificates-compact:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
-        .cert-compact-card {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            width: 100%;
-        }
-        .cert-compact-logo {
-            width: 100px;
-            height: 100px;
-            background: var(--light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            overflow: hidden;
-        }
-        .cert-compact-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            padding: 0.8rem;
-        }
-        .cert-compact-content {
-            flex: 1;
-        }
-        .cert-compact-content h3 {
-            font-size: 1.6rem;
-            margin-bottom: 0.8rem;
-            color: var(--dark);
-        }
-        .cert-compact-list {
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 0.8rem;
-            font-size: 1rem;
-        }
-        .cert-compact-desc {
-            color: var(--gray);
-            line-height: 1.6;
-            font-size: 1rem;
-        }
-        .cert-compact-link {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            background: var(--primary);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: background 0.3s, transform 0.2s;
-            white-space: nowrap;
-        }
-        .cert-compact-link:hover {
-            background: #c41218;
-            transform: translateY(-2px);
-        }
-        @media (max-width: 768px) {
-            .cert-compact-card {
-                flex-direction: column;
-                text-align: center;
-            }
-            .certificates-compact {
-                padding: 2rem;
-            }
-        }
-        
-        .contact-section {
-            background: var(--dark); color: var(--white);
-            padding: 4rem 2rem; text-align: center; margin-top: 5rem;
-        }
-        .contact-links {
-            display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap;
-        }
-        .contact-btn {
-            display: inline-block; padding: 1rem 2rem;
-            background: var(--primary); color: var(--white);
-            text-decoration: none; border-radius: 8px;
-            font-weight: 600; transition: background 0.3s, transform 0.2s;
-        }
-        .contact-btn:hover { background: #c41218; transform: translateY(-2px); }
-        .contact-btn.secondary { background: transparent; border: 2px solid var(--white); }
-        .contact-btn.secondary:hover { background: var(--white); color: var(--dark); }
-        footer {
-            background: #0a0a0a; color: rgba(255,255,255,0.6);
-            text-align: center; padding: 2rem; font-size: 0.9rem;
-        }
-        
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .subtitle { font-size: 1.1rem; }
-            nav ul { gap: 1rem; }
-            .container { padding: 3rem 1.5rem; }
-            .projects-grid { grid-template-columns: 1fr; }
-            .gallery-container { height: 200px; }
+        .gallery-btn:hover{ background: rgba(0,0,0,0.8); }
+        .gallery-btn.prev{ left: 20px; }
+        .gallery-btn.next{ right: 20px; }
+
+        footer{ padding:30px 0; text-align:center; color:var(--muted); font-size:0.95rem; border-top: 1px solid #eee; margin-top: 40px; }
+
+        @media (max-width:900px){
+            header{ min-height:260px; padding:32px 16px; }
+            .exp-media{ display:none; }
+            h1{ font-size: 1.6rem; }
+            .projects-grid{ grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
+
+    <!-- ========== HEADER ========== -->
     <header>
         <div class="header-content">
-            <img src="" alt="Aibike Moldobaeva" class="profile-img">
+            <!-- TODO: Replace with your profile photo in /images/ folder -->
+            <img class="profile-img" src="images/aibike-profile.jpg" alt="Aibike Moldobaeva">
             <h1>Aibike Moldobaeva</h1>
-            <p class="subtitle">Electrical & Electronics Engineering Student</p>
-            <p class="tagline">IoT & Embedded Systems | Fabrication Lab Instructor | Hackathon Winner</p>
+            <div class="subtitle">Electrical & Electronics Engineering Student — Kyrgyz-Turkish Manas University</div>
+            <div class="tagline">IoT & Embedded Systems · Fabrication Lab Instructor · Hackathon Winner · STEM Volunteer</div>
         </div>
     </header>
 
+    <!-- ========== NAVIGATION ========== -->
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#certificates">Certificates</a></li>
             <li><a href="#achievements">Achievements</a></li>
@@ -487,326 +254,549 @@
         </ul>
     </nav>
 
-    <div class="container">
+    <main class="container">
+        <!-- ========== ABOUT ========== -->
         <section id="about">
             <h2>About Me</h2>
             <p class="section-intro">
-                I'm a second-year Electrical & Electronics Engineering student at Kyrgyz-Turkish Manas University 
-                with a GPA of 3.77 (Top 5 in my class). Passionate about IoT, Arduino, and embedded systems, I've 
-                developed several practical projects, from smart plant monitoring to automated irrigation. 
-                I've also led a winning makeathon team that built a magnetic levitation train for a children's science park. 
-                I'm currently participating in exchange studies in İzmir, Türkiye, and exploring AI integration for future IoT projects.
+                Third-year Electrical & Electronics Engineering student at Kyrgyz-Turkish Manas University with a <strong>GPA of 3.77</strong>, 
+                ranking in the <strong>top 10%</strong> of my cohort. I specialize in IoT and embedded systems, developing projects with 
+                Arduino/ESP platforms and rapid prototyping in FabLab. As a bilingual professional fluent in <strong>English, Russian, 
+                Turkish, and Kyrgyz</strong>, I've participated in prestigious programs including <strong>Huawei Seeds for the Future</strong> 
+                and <strong>NASA Space Apps Challenge</strong>. Currently on exchange in İzmir, Turkey, I'm passionate about integrating 
+                AI with IoT systems to create innovative engineering solutions.
             </p>
         </section>
 
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <!-- Project 1: IoT Smart Plant Monitor -->
-                <div class="project-card">
-                    <div class="gallery-container">
-                        <div class="gallery-slider" data-gallery="1">
-                            <div class="gallery-item">
-                                <img src="projects/plant-monitor-1.jpg" alt="Smart Plant Monitor" data-gallery="1">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="projects/plant-monitor-2.jpg" alt="Smart Plant Monitor Dashboard" data-gallery="1">
-                            </div>
-                            <div class="gallery-item">
-                                <video data-gallery="1" controls>
-                                    <source src="projects/plant-monitor-demo.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <button class="gallery-arrow prev" data-gallery="1">‹</button>
-                        <button class="gallery-arrow next" data-gallery="1">›</button>
-                        <div class="gallery-nav" data-gallery="1">
-                            <span class="gallery-dot active"></span>
-                            <span class="gallery-dot"></span>
-                            <span class="gallery-dot"></span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>IoT Smart Plant Monitor</h3>
-                        <p>Developed a plant health monitoring system using ESP8266, measuring soil moisture, light, and temperature with data visualization on a web dashboard.</p>
-                        <div class="tech-tags">
-                            <span class="tag">Arduino</span><span class="tag">ESP8266</span><span class="tag">IoT</span><span class="tag">Sensors</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: Maglev Train -->
-                <div class="project-card">
-                    <div class="gallery-container">
-                        <div class="gallery-slider" data-gallery="2">
-                            <div class="gallery-item">
-                                <img src="projects/maglev-1.jpg" alt="Maglev Train" data-gallery="2">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="projects/maglev-2.jpg" alt="Maglev Train Track" data-gallery="2">
-                            </div>
-                            <div class="gallery-item">
-                                <video data-gallery="2" controls>
-                                    <source src="projects/maglev-demo.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="projects/maglev-team.jpg" alt="Makeathon Team" data-gallery="2">
-                            </div>
-                        </div>
-                        <button class="gallery-arrow prev" data-gallery="2">‹</button>
-                        <button class="gallery-arrow next" data-gallery="2">›</button>
-                        <div class="gallery-nav" data-gallery="2">
-                            <span class="gallery-dot active"></span>
-                            <span class="gallery-dot"></span>
-                            <span class="gallery-dot"></span>
-                            <span class="gallery-dot"></span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Maglev Train Prototype</h3>
-                        <p>Led a team to design a magnetic levitation train model for a mobile children's science park. The project won 1st place at the Makeathon.</p>
-                        <div class="tech-tags">
-                            <span class="tag">Team Leadership</span><span class="tag">Physics</span><span class="tag">Electromagnetism</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: FANTOMAT -->
-                <div class="project-card">
-                    <div class="gallery-container">
-                        <div class="gallery-slider" data-gallery="3">
-                            <div class="gallery-item">
-                                <img src="projects/fantomat-1.jpg" alt="FANTOMAT Machine" data-gallery="3">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="projects/fantomat-2.jpg" alt="FANTOMAT App" data-gallery="3">
-                            </div>
-                            <div class="gallery-item">
-                                <video data-gallery="3" controls>
-                                    <source src="projects/fantomat-demo.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <button class="gallery-arrow prev" data-gallery="3">‹</button>
-                        <button class="gallery-arrow next" data-gallery="3">›</button>
-                        <div class="gallery-nav" data-gallery="3">
-                            <span class="gallery-dot active"></span>
-                            <span class="gallery-dot"></span>
-                            <span class="gallery-dot"></span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>FANTOMAT - Reverse Vending System</h3>
-                        <p>Contributed to "FANTOMAT," a recycling system that collects bottles and cans for reward points via a mobile app, promoting eco-friendly behavior in Kyrgyzstan.</p>
-                        <div class="tech-tags">
-                            <span class="tag">IoT</span><span class="tag">App Integration</span><span class="tag">Communication</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- ========== EXPERIENCE (placed before Projects) ========== -->
         <section id="experience">
             <h2>Experience</h2>
-            
+
+            <!-- TODO: Add video 'videos/fablab-instruction.mp4' or remove this exp-media div -->
             <div class="experience-item">
-                <div class="experience-with-media">
-                    <div class="experience-text">
-                        <h3>Fabrication Lab Instructor</h3>
-                        <p class="experience-meta">FabLab | 2024 – Present</p>
-                        <p>Train students in Arduino, robotics, and prototyping tools. Guide IoT and embedded systems projects. 
-                        Support design, fabrication, and programming workshops.</p>
-                        <a href="videos/fablab-instruction.mp4" class="exp-link" target="_blank">Watch Instruction Video →</a>
-                    </div>
-                    <div class="experience-media">
-                        <video controls>
-                            <source src="videos/fablab-instruction.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
+                <div class="exp-media">
+                    <video controls preload="metadata">
+                        <source src="videos/fablab-instruction.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="exp-text">
+                    <h3>Fabrication Lab Instructor — FabLab</h3>
+                    <div class="experience-meta">2024 — Present</div>
+                    <p>Train students in Arduino, robotics, and prototyping tools including 3D printing and laser cutting. 
+                    Guide IoT and embedded systems projects, mentor hackathon teams, and conduct workshops on digital fabrication techniques.</p>
+                </div>
+            </div>
+
+            <!-- TODO: Add photo 'images/manas-campus.jpg' -->
+            <div class="experience-item">
+                <div class="exp-media">
+                    <img src="images/manas-campus.jpg" alt="Kyrgyz-Turkish Manas University">
+                </div>
+                <div class="exp-text">
+                    <h3>Kyrgyz-Turkish Manas University</h3>
+                    <div class="experience-meta">B.Sc. Electrical & Electronics Engineering — 2023 — Present</div>
+                    <p>Third-year student with focus on electronics, signals and systems, circuit analysis, and embedded systems. 
+                    Active participant in student clubs, competitions, and research projects.</p>
+                    <ul style="color:var(--muted); margin-top:8px; padding-left: 20px;">
+                        <li>GPA: 3.77 (Top 10%)</li>
+                        <li>Projects: Smart plant monitor, automated irrigation, maglev prototype</li>
+                        <li>Scholarship: Excellent Student Scholarship ($50/month)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- TODO: Add photo 'images/huawei-seeds.jpg' -->
+            <div class="experience-item">
+                <div class="exp-media">
+                    <img src="images/huawei-seeds.jpg" alt="Huawei Seeds for the Future">
+                </div>
+                <div class="exp-text">
+                    <h3>Huawei — Seeds for the Future</h3>
+                    <div class="experience-meta">Huawei | 2024</div>
+                    <p>Selected for Huawei's prestigious global technology and leadership program. Gained hands-on experience with 
+                    5G networks, cloud computing, and AI technologies. Collaborated with international peers on technical challenges 
+                    and participated in cultural exchange activities.</p>
                 </div>
             </div>
 
             <div class="experience-item">
-                <div class="experience-with-media">
-                    <div class="experience-text">
-                        <h3>Huawei Seeds for the Future</h3>
-                        <p class="experience-meta">Huawei | 2024</p>
-                        <p>Participated in a global program on 5G, AI, and cloud technologies. 
-                        Collaborated with international teams and developed leadership and innovation skills. 
-                        Gained exposure to cutting-edge telecommunications technology and industry best practices.</p>
-                        <a href="videos/seeds-program.mp4" class="exp-link" target="_blank">Watch Program Video →</a>
-                    </div>
-                    <div class="https://drive.google.com/file/d/1Lz4qhtMLzhD4iGezlW_AmHxcip4_2DCC/view?usp=drive_link">
-                        <video controls>
-                            <source src="videos/seeds-program.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
+                <div class="exp-text">
+                    <h3>Exchange Program — İzmir, Turkey</h3>
+                    <div class="experience-meta">Spring 2025</div>
+                    <p>Completed advanced coursework in electronics, communication systems, and signal processing at a Turkish university. 
+                    Engaged in multicultural academic collaboration and expanded technical knowledge through international exposure.</p>
                 </div>
             </div>
 
             <div class="experience-item">
-                <div class="experience-with-media">
-                    <div class="experience-text">
-                        <h3>Exchange Program</h3>
-                        <p class="experience-meta">İzmir, Türkiye | 2025</p>
-                        <p>Completed coursework in electronics and communication systems while engaging in multicultural academic collaboration. 
-                        Expanded technical knowledge and developed cross-cultural communication skills in an international academic environment.</p>
-                        <a href="videos/exchange-program.mp4" class="exp-link" target="_blank">Watch Exchange Video →</a>
-                    </div>
-                    <div class="experience-media">
-                        <video controls>
-                            <source src="videos/exchange-program.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
+                <div class="exp-text">
+                    <h3>Volunteer — ProAstro STEM Technopark</h3>
+                    <div class="experience-meta">Kyrgyzstan's First STEM Science & Technology Park | 2023 — 2024</div>
+                    <p>Volunteered at ProAstro, assisting in prototyping and preparing exhibition projects. Helped organize educational 
+                    activities and workshops for visitors, contributing to promoting STEM education and innovation culture in Kyrgyzstan.</p>
                 </div>
             </div>
         </section>
 
+        <!-- ========== PROJECTS ========== -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <p class="section-intro">Click images/videos to view in full screen. Photo galleries include navigation arrows.</p>
+
+            <div class="projects-grid">
+                <!-- TODO: Add video 'videos/seeds-program.mp4' (1.5 min) -->
+                <article class="project-card">
+                    <div class="project-media" onclick="openLightboxVideo('videos/seeds-program.mp4')">
+                        <video controls preload="metadata">
+                            <source src="videos/seeds-program.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-content">
+                        <h3>Huawei — Seeds for the Future</h3>
+                        <p>Global training program on telecommunications, 5G, cloud computing, and AI technologies. Participated in 2024, 
+                        developing leadership and innovation skills through international collaboration.</p>
+                        <div class="tech-tags">
+                            <span class="tag">5G</span>
+                            <span class="tag">Cloud Computing</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Leadership</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- TODO: Add video 'videos/2d-manufacturing.mp4' (1 min) -->
+                <article class="project-card">
+                    <div class="project-media" onclick="openLightboxVideo('videos/2d-manufacturing.mp4')">
+                        <video controls preload="metadata">
+                            <source src="videos/2d-manufacturing.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-content">
+                        <h3>2D Manufacturing Workflow</h3>
+                        <p>Demonstration of laser cutting, CAD-to-fabrication workflow, and rapid prototyping techniques from FabLab 
+                        instruction sessions. Showcases the complete process from design to finished product.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Laser Cutting</span>
+                            <span class="tag">CAD</span>
+                            <span class="tag">Prototyping</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- TODO: Add video 'videos/nasa-hackathon.mp4' and update the project link -->
+                <article class="project-card">
+                    <div class="project-media" onclick="openLightboxVideo('videos/nasa-hackathon.mp4')">
+                        <video controls preload="metadata">
+                            <source src="videos/nasa-hackathon.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-content">
+                        <h3>NASA Space Apps — Hackathon Project</h3>
+                        <p>Participated in NASA's International Space Apps Challenge, developing innovative solutions for space exploration 
+                        challenges. Focused on data visualization and sustainable solutions for space missions.</p>
+                        <div class="tech-tags">
+                            <span class="tag">NASA</span>
+                            <span class="tag">Data Viz</span>
+                            <span class="tag">Sustainability</span>
+                        </div>
+                        <!-- TODO: Replace with your actual NASA project link -->
+                        <a href="https://your-nasa-project-link-here.com" target="_blank" style="color:var(--primary); font-weight:600; text-decoration:none; display:block; margin-top:8px;">View Full Project →</a>
+                    </div>
+                </article>
+
+                <!-- TODO: Add 5 photos: maglev-1.jpg through maglev-5.jpg in /projects/ folder -->
+                <article class="project-card">
+                    <div class="project-media" onclick="openLightboxGallery('maglev')">
+                        <img src="projects/maglev-1.jpg" alt="Maglev Train Prototype">
+                    </div>
+                    <div class="project-content">
+                        <h3>Maglev Train Prototype — 1st Place</h3>
+                        <p>Led team to design and build a magnetic levitation train model for a mobile children's science park. 
+                        Applied principles of electromagnetism to create an educational exhibit. <strong>Won 1st place</strong> at national Makeathon.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Team Lead</span>
+                            <span class="tag">Electromagnetism</span>
+                            <span class="tag">Prototyping</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- TODO: Add 4-5 photos: fantomat-1.jpg through fantomat-4/5.jpg in /projects/ folder -->
+                <article class="project-card">
+                    <div class="project-media" onclick="openLightboxGallery('fantomat')">
+                        <img src="projects/fantomat-1.jpg" alt="FANTOMAT Reverse Vending Machine">
+                    </div>
+                    <div class="project-content">
+                        <h3>FANTOMAT — Reverse Vending System</h3>
+                        <p>Contributed to developing an innovative recycling system that collects bottles and cans in exchange for 
+                        reward points via mobile app. Promotes sustainable behavior and environmental awareness in Kyrgyzstan.</p>
+                        <div class="tech-tags">
+                            <span class="tag">IoT</span>
+                            <span class="tag">Mobile App</span>
+                            <span class="tag">Sustainability</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ========== SKILLS & TOOLS ========== -->
         <section id="skills">
             <h2>Skills & Tools</h2>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming & Software</h3>
+                <div class="skill-card">
+                    <h4>Programming & Software</h4>
                     <ul class="skill-list">
-                        <li>C/C++ (Arduino)</li>
-                        <li>Python (ML & Data)</li>
-                        <li>MATLAB / Simulink</li>
-                        <li>Git & Version Control</li>
+                        <li>C / C++ (Arduino, Embedded)</li>
+                        <li>MATLAB & Simulink</li>
+                        <li>Python (ML & Data Analysis)</li>
+                        <li>Git & GitHub</li>
+                        <li>Proteus (Circuit Simulation)</li>
+                        <li>TinkerCAD</li>
                     </ul>
                 </div>
-
-                <div class="skill-category">
-                    <h3>Hardware & Electronics</h3>
+                <div class="skill-card">
+                    <h4>Hardware & Embedded</h4>
                     <ul class="skill-list">
-                        <li>Arduino & ESP Boards</li>
-                        <li>Sensor Systems</li>
-                        <li>Circuit Design</li>
-                        <li>Oscilloscope, Multimeter</li>
+                        <li>Arduino & ESP8266/ESP32</li>
+                        <li>Sensor Systems & Integration</li>
+                        <li>Circuit Design & Analysis</li>
+                        <li>PCB Design</li>
+                        <li>Oscilloscope & Multimeter</li>
                     </ul>
                 </div>
-
-                <div class="skill-category">
-                    <h3>Fabrication & Design</h3>
+                <div class="skill-card">
+                    <h4>Design & Fabrication</h4>
                     <ul class="skill-list">
-                        <li>3D Printing, Laser Cutting</li>
-                        <li>Fusion 360, SolidWorks</li>
-                        <li>PCB Layout</li>
+                        <li>SolidWorks (3D Modeling)</li>
+                        <li>AutoCAD (2D Design)</li>
+                        <li>3D Printing (FDM, SLA)</li>
+                        <li>Laser Cutting & Engraving</li>
                     </ul>
                 </div>
-
-                <div class="skill-category">
-                    <h3>Communication & Leadership</h3>
+                <div class="skill-card">
+                    <h4>Media & Visualization</h4>
                     <ul class="skill-list">
-                        <li>Debate & Public Speaking</li>
-                        <li>Mentorship & Teamwork</li>
-                        <li>Project Presentation</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe After Effects</li>
+                        <li>Visual Content Creation</li>
+                        <li>Microsoft Office Suite</li>
+                        <li>Presentation & Documentation</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Languages</h4>
+                    <ul class="skill-list">
+                        <li>English (Fluent)</li>
+                        <li>Russian (Fluent)</li>
+                        <li>Turkish (Fluent)</li>
+                        <li>Kyrgyz (Native)</li>
                     </ul>
                 </div>
             </div>
         </section>
 
+        <!-- ========== PHOTO GALLERY ========== -->
+        <!-- TODO: Add 3-4 photos: debate-1.jpg through debate-4.jpg in /projects/ folder -->
+        <section id="photos">
+            <h2>Photo Gallery</h2>
+            <p class="section-intro">Moments from various activities, competitions, and university life.</p>
+            <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr));">
+                <div class="project-card">
+                    <div class="project-media" onclick="openLightboxImage('projects/debate-1.jpg')">
+                        <img src="projects/debate-1.jpg" alt="University Activity">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-media" onclick="openLightboxImage('projects/debate-2.jpg')">
+                        <img src="projects/debate-2.jpg" alt="Competition">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-media" onclick="openLightboxImage('projects/debate-3.jpg')">
+                        <img src="projects/debate-3.jpg" alt="Event">
+                    </div>
+                </div>
+                <!-- TODO: Remove this block if you only have 3 photos -->
+                <div class="project-card">
+                    <div class="project-media" onclick="openLightboxImage('projects/debate-4.jpg')">
+                        <img src="projects/debate-4.jpg" alt="Activity">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CERTIFICATES & TRAINING ========== -->
+        <!-- TODO: Combine all certificates into 'certificates/aibike-certificates.pdf' -->
         <section id="certificates">
             <h2>Certificates & Training</h2>
-            <p class="section-intro">Professional development through KOICA SIFO specialized technical training programs.</p>
-            
-            <div class="certificates-compact">
-                <div class="cert-compact-card">
-                    <div class="cert-compact-logo">
-                        <img src="koica-logo.png" alt="KOICA SIFO Logo">
+            <p class="section-intro">Professional development through specialized technical training programs and international competitions.</p>
+
+            <div style="background: var(--light); padding: 24px; border-radius: 10px; border-left: 4px solid var(--primary); margin-bottom: 24px;">
+                <h4 style="margin-bottom: 16px; font-size: 1.2rem;">Completed Certifications:</h4>
+                <ul style="color: var(--muted); line-height: 2; padding-left: 20px;">
+                    <li><strong>Arduino Development</strong> — KOICA SIFO Program</li>
+                    <li><strong>Internet of Things (IoT)</strong> — KOICA SIFO Program</li>
+                    <li><strong>2D Design & Fabrication</strong> — KOICA SIFO Program</li>
+                    <li><strong>3D Printing & Modeling</strong> — KOICA SIFO Program</li>
+                    <li><strong>Huawei Seeds for the Future</strong> — 2024</li>
+                    <li><strong>NASA Space Apps Hackathon</strong> — Participant</li>
+                    <li><strong>National Makeathon</strong> — 1st Place Winner</li>
+                </ul>
+                <a class="cert-link" href="certificates/aibike-certificates.pdf" target="_blank" style="margin-top: 20px; display: inline-block;">
+                    📥 Download All Certificates (PDF)
+                </a>
+            </div>
+
+            <div style="background: var(--white); padding: 24px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                <h4 style="margin-bottom: 16px; font-size: 1.2rem; color: var(--dark);">Language Proficiency:</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                    <div style="text-align: center; padding: 16px; background: var(--light); border-radius: 8px;">
+                        <div style="font-size: 2rem; margin-bottom: 8px;">🇬🇧</div>
+                        <strong style="display: block; margin-bottom: 4px;">English</strong>
+                        <span style="color: var(--muted); font-size: 0.9rem;">Fluent</span>
                     </div>
-                    <div class="cert-compact-content">
-                        <h3>KOICA SIFO Technical Training</h3>
-                        <p class="cert-compact-list">Arduino Development • Internet of Things (IoT) • 2D Design & Fabrication • 3D Printing & Modeling</p>
-                        <p class="cert-compact-desc">Comprehensive training in embedded systems, IoT networks, digital fabrication, and additive manufacturing technologies.</p>
+                    <div style="text-align: center; padding: 16px; background: var(--light); border-radius: 8px;">
+                        <div style="font-size: 2rem; margin-bottom: 8px;">🇷🇺</div>
+                        <strong style="display: block; margin-bottom: 4px;">Russian</strong>
+                        <span style="color: var(--muted); font-size: 0.9rem;">Fluent</span>
                     </div>
-                    <a href="certificates/koica-certificates.pdf" class="cert-compact-link" target="_blank">View All Certificates →</a>
+                    <div style="text-align: center; padding: 16px; background: var(--light); border-radius: 8px;">
+                        <div style="font-size: 2rem; margin-bottom: 8px;">🇹🇷</div>
+                        <strong style="display: block; margin-bottom: 4px;">Turkish</strong>
+                        <span style="color: var(--muted); font-size: 0.9rem;">Fluent</span>
+                    </div>
+                    <div style="text-align: center; padding: 16px; background: var(--light); border-radius: 8px;">
+                        <div style="font-size: 2rem; margin-bottom: 8px;">🇰🇬</div>
+                        <strong style="display: block; margin-bottom: 4px;">Kyrgyz</strong>
+                        <span style="color: var(--muted); font-size: 0.9rem;">Native</span>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- ========== ACHIEVEMENTS ========== -->
         <section id="achievements">
-            <h2>Achievements</h2>
+            <h2>Achievements & Recognition</h2>
             <div class="achievements-grid">
-                <div class="achievement-card">
-                    <h3>🏆 1st Place - Makeathon</h3>
-                    <p>Led a team to victory with the Maglev Train project at a national engineering makeathon.</p>
+                <div class="skill-card">
+                    <h4>🎓 Academic Excellence</h4>
+                    <p style="color:var(--muted);">
+                        Maintaining <strong>3.77 GPA</strong>, ranking in <strong>Top 10%</strong> of class. 
+                        Recipient of Excellent Student Scholarship ($50/month) for outstanding academic performance.
+                    </p>
                 </div>
-                <div class="achievement-card">
-                    <h3>📚 Academic Excellence</h3>
-                    <p>Top 5 in class with GPA 3.77. Strong background in mathematics, physics, and electronics.</p>
+                <div class="skill-card">
+                    <h4>🏆 1st Place — National Makeathon</h4>
+                    <p style="color:var(--muted);">
+                        Led team to victory with magnetic levitation train project. Demonstrated exceptional leadership, 
+                        creativity, and technical skills under time constraints.
+                    </p>
                 </div>
-                <div class="achievement-card">
-                    <h3>🎓 National Math Olympiad Winner</h3>
-                    <p>1st place in Kyrgyz Republic math competition, showcasing problem-solving and analytical skills.</p>
+                <div class="skill-card">
+                    <h4>🥇 Math Olympiad Finalist</h4>
+                    <p style="color:var(--muted);">
+                        <strong>1st place</strong> in Kemin region and <strong>2nd place</strong> in Chui province at 
+                        National School Mathematics Olympiad. Advanced to national finals.
+                    </p>
                 </div>
-                <div class="achievement-card">
-                    <h3>🌱 STEM Education Volunteer</h3>
-                    <p>Taught math and science to school children who fell behind during the pandemic.</p>
+                <div class="skill-card">
+                    <h4>🌱 STEM Education Volunteer</h4>
+                    <p style="color:var(--muted);">
+                        Taught mathematics and science to school children who fell behind during the pandemic. 
+                        Developed engaging lesson plans and provided one-on-one tutoring.
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <h4>🔬 ProAstro Technopark Volunteer</h4>
+                    <p style="color:var(--muted);">
+                        Volunteered at Kyrgyzstan's first STEM science and technology park, assisting in prototyping 
+                        exhibition projects and organizing educational activities.
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <h4>🌍 Multilingual Communicator</h4>
+                    <p style="color:var(--muted);">
+                        Fluent in <strong>four languages</strong> (English, Russian, Turkish, Kyrgyz), enabling effective 
+                        communication in international academic and professional environments.
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <h4>🚀 NASA Space Apps Hackathon</h4>
+                    <p style="color:var(--muted);">
+                        Participated in NASA's International Space Apps Challenge, developing innovative solutions 
+                        for real-world space exploration challenges through collaborative problem-solving.
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <h4>🎤 Debate Club Competitor</h4>
+                    <p style="color:var(--muted);">
+                        Active member and mentor in university debate club, competing in regional tournaments 
+                        and training new generations of debaters.
+                    </p>
                 </div>
             </div>
         </section>
-    </div>
 
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-close" onclick="closeLightbox()">×</div>
-        <div class="lightbox-content" id="lightbox-content"></div>
-    </div>
+        <!-- ========== CONTACT ========== -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-section">
+                <p style="max-width:780px; margin:0 auto 8px;">
+                    I'm actively seeking internship and research opportunities in IoT, embedded systems, and AI applications. 
+                    Let's collaborate on innovative engineering solutions!
+                </p>
+                <p style="font-size: 1.1rem; margin-bottom: 16px;">
+                    📱 +996 708 072 286
+                </p>
+                <div class="contact-links">
+                    <a class="contact-btn" href="mailto:aibikemoldobaeva@gmail.com">
+                        📧 aibikemoldobaeva@gmail.com
+                    </a>
+                    <a class="contact-btn secondary" href="https://github.com/mynameisbikaa" target="_blank">
+                        💻 GitHub
+                    </a>
+                    <a class="contact-btn secondary" href="https://wa.me/996708072286" target="_blank">
+                        💬 WhatsApp
+                    </a>
+                    <a class="contact-btn secondary" href="https://t.me/996708072286" target="_blank">
+                        ✈️ Telegram
+                    </a>
+                    <a class="contact-btn secondary" href="https://linkedin.com/in/aibike-moldobaeva" target="_blank">
+                        💼 LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <div class="contact-section" id="contact">
-        <h2 style="color: white; margin-bottom: 1rem;">Let's Connect</h2>
-        <p style="max-width: 600px; margin: 0 auto 2rem; color: rgba(255,255,255,0.8);">
-            I'm seeking internship or research opportunities in IoT, embedded systems, and AI applications. 
-            I'd love to collaborate on innovative engineering solutions.
-        </p>
-        <div class="contact-links">
-            <a href="mailto:aibike.moldobaeva@example.com" class="contact-btn">Email Me</a>
-            <a href="https://linkedin.com/in/aibike-moldobaeva" class="contact-btn secondary" target="_blank">LinkedIn</a>
-            <a href="https://github.com/aibikem" class="contact-btn secondary" target="_blank">GitHub</a>
+    <!-- ========== LIGHTBOX ========== -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content" id="lightbox-content" onclick="event.stopPropagation()">
+            <div class="lightbox-close" onclick="closeLightbox()">×</div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2025 Aibike Moldobaeva. Built for EPFL E3 Internship Application.</p>
+        <p>&copy; 2025 Aibike Moldobaeva — Built for EPFL E3 Internship Application</p>
+        <p style="margin-top: 8px; font-size: 0.85rem;">Electrical & Electronics Engineering | Kyrgyz-Turkish Manas University</p>
     </footer>
 
     <script>
-        // Gallery Slider Functionality
-        const galleries = {};
+    /* ========================================
+       LIGHTBOX & GALLERY FUNCTIONALITY
+       ======================================== */
 
-        document.querySelectorAll('.gallery-slider').forEach(slider => {
-            const galleryId = slider.dataset.gallery;
-            galleries[galleryId] = {
-                currentIndex: 0,
-                slider: slider,
-                items: slider.querySelectorAll('.gallery-item'),
-                dots: document.querySelector(`.gallery-nav[data-gallery="${galleryId}"]`).querySelectorAll('.gallery-dot')
+    // Define photo galleries for Maglev and FANTOMAT projects
+    // TODO: Make sure these file paths match your actual photos in /projects/ folder
+    const galleries = {
+        maglev: [
+            'projects/maglev-1.jpg',
+            'projects/maglev-2.jpg',
+            'projects/maglev-3.jpg',
+            'projects/maglev-4.jpg',
+            'projects/maglev-5.jpg'
+        ],
+        fantomat: [
+            'projects/fantomat-1.jpg',
+            'projects/fantomat-2.jpg',
+            'projects/fantomat-3.jpg',
+            'projects/fantomat-4.jpg'
+            // TODO: Add 'projects/fantomat-5.jpg' if you have 5 photos
+        ]
+    };
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxContent = document.getElementById('lightbox-content');
+
+    // Open single image in lightbox
+    function openLightboxImage(src){
+        lightboxContent.innerHTML = `
+            <div class="lightbox-close" onclick="closeLightbox()">×</div>
+            <img src="${src}" alt="Full size image" />
+        `;
+        lightbox.classList.add('active');
+    }
+
+    // Open video in lightbox
+    function openLightboxVideo(src){
+        lightboxContent.innerHTML = `
+            <div class="lightbox-close" onclick="closeLightbox()">×</div>
+            <video controls autoplay style="max-width:100%; max-height:90vh;">
+                <source src="${src}" type="video/mp4">
+            </video>
+        `;
+        lightbox.classList.add('active');
+    }
+
+    // Open photo gallery with navigation arrows
+    function openLightboxGallery(galleryId){
+        const photos = galleries[galleryId];
+        if(!photos || photos.length === 0) {
+            console.error('Gallery not found:', galleryId);
+            return;
+        }
+        
+        let currentIndex = 0;
+
+        function renderGallery(){
+            lightboxContent.innerHTML = `
+                <div class="lightbox-close" onclick="closeLightbox()">×</div>
+                <button class="gallery-btn prev" onclick="event.stopPropagation()">‹</button>
+                <img src="${photos[currentIndex]}" alt="Gallery image ${currentIndex + 1}" style="max-width:90%; max-height:85vh; display:block; margin: 0 auto;" />
+                <button class="gallery-btn next" onclick="event.stopPropagation()">›</button>
+                <div style="position:absolute; bottom:20px; left:50%; transform:translateX(-50%); color:white; background:rgba(0,0,0,0.6); padding:8px 16px; border-radius:20px; font-size:0.9rem;">
+                    ${currentIndex + 1} / ${photos.length}
+                </div>
+            `;
+            
+            // Add event listeners to navigation buttons
+            const prevBtn = lightboxContent.querySelector('.gallery-btn.prev');
+            const nextBtn = lightboxContent.querySelector('.gallery-btn.next');
+            
+            prevBtn.onclick = (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+                renderGallery();
             };
+            
+            nextBtn.onclick = (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex + 1) % photos.length;
+                renderGallery();
+            };
+        }
+
+        renderGallery();
+        lightbox.classList.add('active');
+    }
+
+    // Close lightbox
+    function closeLightbox(){
+        lightbox.classList.remove('active');
+        lightboxContent.innerHTML = '';
+    }
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            if(targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         });
-
-        function moveSlide(galleryId, direction) {
-            const gallery = galleries[galleryId];
-            gallery.currentIndex += direction;
-            
-            if (gallery.currentIndex < 0) gallery.currentIndex = gallery.items.length - 1;
-            if (gallery.currentIndex >= gallery.items.length) gallery.currentIndex = 0;
-            
-            updateGallery(galleryId);
-        }
-
-        function goToSlide(galleryId, index) {
-            galleries[galleryId].currentIndex = index;
-            updateGallery(galleryId);
-        }
-
-        function updateGallery(galleryId) {
-            const gallery = galleries[galleryId];
-            const offset = -gallery.currentIndex * 100;
-            gallery.slider.style.transform = `translateX(
+    });
 
 
-
+    </script>
+</body>
+</html>
