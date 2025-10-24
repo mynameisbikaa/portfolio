@@ -295,142 +295,162 @@ header h1 {
         For now, I'm just focused on learning as much as I can. Every project teaches me something new, even when it fails (especially when it fails, actually). I'm still figuring out exactly where my path will lead, but I know it involves building things, solving problems, and probably a lot of trial and error.
     </p>
 </section>
+    <!-- ========== EXPERIENCE (placed before Projects) ========== -->
+<section id="experience">
+    <h2>Experience</h2>
+
+    <!-- ✅ FabLab video with preview and fullscreen on click -->
+    <div class="experience-item">
+        <div class="exp-media" onclick="openLightboxVideo('фаблабвидео.mp4')">
+            <video 
+                controls 
+                muted 
+                playsinline 
+                preload="metadata" 
+                poster="images/fablab-thumbnail.jpg">
+                <source src="фаблабвидео.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="exp-text">
+            <h3>Fabrication Lab Instructor — FabLab</h3>
+            <div class="experience-meta">2024 — Present</div>
+            <p>Train students in Arduino, robotics, and prototyping tools including 3D printing and laser cutting. 
+            Guide IoT and embedded systems projects, mentor hackathon teams, and conduct workshops on digital fabrication techniques.</p>
+        </div>
+    </div>
+
+    <!-- ✅ University -->
+    <div class="experience-item">
+        <div class="exp-media">
+            <img src="images/manas-campus.jpg" alt="Kyrgyz-Turkish Manas University" loading="lazy">
+        </div>
+        <div class="exp-text">
+            <h3>Kyrgyz-Turkish Manas University</h3>
+            <div class="experience-meta">B.Sc. Electrical & Electronics Engineering — 2022 — Present</div>
+            <p>Third-year student with focus on electronics, signals and systems, circuit analysis, and embedded systems. 
+            Active participant in student clubs, competitions.</p>
+            <ul style="color:var(--muted); margin-top:8px; padding-left: 20px;">
+                <li>GPA: 3.77 (Top 10%)</li>
+                <li>Scholarship: Excellent Student Scholarship</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ✅ Huawei -->
+    <div class="experience-item">
+        <div class="exp-media">
+            <img src="images/huawei-seeds.jpg" alt="Huawei Seeds for the Future" loading="lazy">
+        </div>
+        <div class="exp-text">
+            <h3>Huawei — Seeds for the Future</h3>
+            <div class="experience-meta">Huawei | 2025</div>
+            <p>Selected for Huawei's prestigious global technology and leadership program. Gained hands-on experience with 
+            5G networks, cloud computing, and AI technologies. Collaborated with international peers on technical challenges 
+            and participated in cultural exchange activities.</p>
+        </div>
+    </div>
+
+    <div class="experience-item">
+        <div class="exp-text">
+            <h3>Exchange Program — İzmir, Turkey</h3>
+            <div class="experience-meta">Fall 2025</div>
+            <p>Completing advanced coursework in electronics, communication systems at a Turkish university. 
+            Engaged in multicultural academic collaboration and expanded technical knowledge through international exposure.</p>
+        </div>
+    </div>
+
+    <div class="experience-item">
+        <div class="exp-text">
+            <h3>Volunteer — ProAstro STEM Technopark</h3>
+            <div class="experience-meta">Kyrgyzstan's First STEM Science & Technology Park | 2024 — 2025</div>
+            <p>Volunteered at ProAstro, assisting in prototyping and preparing exhibition projects. Helped organize educational 
+            activities and workshops for visitors, contributing to promoting STEM education and innovation culture in Kyrgyzstan.</p>
+        </div>
+    </div>
+</section>
 
 
-        <!-- ========== EXPERIENCE (placed before Projects) ========== -->
-        <section id="experience">
-            <h2>Experience</h2>
+<!-- ========== PROJECTS ========== -->
+<section id="projects">
+    <h2>Featured Projects</h2>
+    <p class="section-intro">Click images/videos to view in full screen. Photo galleries include navigation arrows.</p>
 
-            <!-- TODO: Add video 'videos/fablab-instruction.mp4' or remove this exp-media div -->
-            <div class="experience-item">
-                <div class="exp-media">
-                    <video controls preload="metadata">
-                        <source src="фаблабвидео.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="exp-text">
-                    <h3>Fabrication Lab Instructor — FabLab</h3>
-                    <div class="experience-meta">2024 — Present</div>
-                    <p>Train students in Arduino, robotics, and prototyping tools including 3D printing and laser cutting. 
-                    Guide IoT and embedded systems projects, mentor hackathon teams, and conduct workshops on digital fabrication techniques.</p>
+    <div class="projects-grid">
+        <!-- ✅ Huawei Project -->
+        <article class="project-card">
+            <div class="project-media" onclick="openLightboxVideo('huaweisftfvideo.mp4')">
+                <video 
+                    controls 
+                    muted 
+                    playsinline 
+                    preload="metadata" 
+                    poster="images/huawei-thumbnail.jpg">
+                    <source src="huaweisftfvideo.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="project-content">
+                <h3>Huawei — Seeds for the Future</h3>
+                <p>Global training program on telecommunications, 5G, cloud computing, and AI technologies. Participated in 2025, 
+                developing leadership and innovation skills through international collaboration.</p>
+                <div class="tech-tags">
+                    <span class="tag">5G</span>
+                    <span class="tag">Cloud Computing</span>
+                    <span class="tag">AI</span>
+                    <span class="tag">Leadership</span>
                 </div>
             </div>
+        </article>
 
-            <!-- TODO: Add photo 'images/manas-campus.jpg' -->
-            <div class="experience-item">
-                <div class="exp-media">
-                    <img src="images/manas-campus.jpg" alt="Kyrgyz-Turkish Manas University">
-                </div>
-                <div class="exp-text">
-                    <h3>Kyrgyz-Turkish Manas University</h3>
-                    <div class="experience-meta">B.Sc. Electrical & Electronics Engineering — 2022 — Present</div>
-                    <p>Third-year student with focus on electronics, signals and systems, circuit analysis, and embedded systems. 
-                    Active participant in student clubs, competitions.</p>
-                    <ul style="color:var(--muted); margin-top:8px; padding-left: 20px;">
-                        <li>GPA: 3.77 (Top 10%)</li>
-                        <li>Scholarship: Excellent Student Scholarship</li>
-                    </ul>
+        <!-- ✅ 2D Manufacturing Project -->
+        <article class="project-card">
+            <div class="project-media" onclick="openLightboxVideo('IMG_6133_compressed.mp4')">
+                <video 
+                    controls 
+                    muted 
+                    playsinline 
+                    preload="metadata" 
+                    poster="images/fabrication-thumbnail.jpg">
+                    <source src="IMG_6133_compressed.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="project-content">
+                <h3>2D Manufacturing Workflow</h3>
+                <p>Demonstration of laser cutting, CAD-to-fabrication workflow, and rapid prototyping techniques from FabLab 
+                instruction sessions. Showcases the complete process from design to finished product.</p>
+                <div class="tech-tags">
+                    <span class="tag">Laser Cutting</span>
+                    <span class="tag">CAD</span>
+                    <span class="tag">Prototyping</span>
                 </div>
             </div>
+        </article>
 
-            <!-- TODO: Add photo 'images/huawei-seeds.jpg' -->
-            <div class="experience-item">
-                <div class="exp-media">
-                    <img src="images/huawei-seeds.jpg" alt="Huawei Seeds for the Future">
-                </div>
-                <div class="exp-text">
-                    <h3>Huawei — Seeds for the Future</h3>
-                    <div class="experience-meta">Huawei | 2025</div>
-                    <p>Selected for Huawei's prestigious global technology and leadership program. Gained hands-on experience with 
-                    5G networks, cloud computing, and AI technologies. Collaborated with international peers on technical challenges 
-                    and participated in cultural exchange activities.</p>
-                </div>
+        <!-- ✅ NASA Project -->
+        <article class="project-card">
+            <div class="project-media" onclick="openLightboxVideo('IMG_4666.mp4')">
+                <video 
+                    controls 
+                    muted 
+                    playsinline 
+                    preload="metadata" 
+                    poster="images/nasa-thumbnail.jpg">
+                    <source src="IMG_4666.mp4" type="video/mp4">
+                </video>
             </div>
-
-            <div class="experience-item">
-                <div class="exp-text">
-                    <h3>Exchange Program — İzmir, Turkey</h3>
-                    <div class="experience-meta">Fall 2025</div>
-                    <p>Completing advanced coursework in electronics, communication systems at a Turkish university. 
-                    Engaged in multicultural academic collaboration and expanded technical knowledge through international exposure.</p>
+            <div class="project-content">
+                <h3>NASA Space Apps — Hackathon Project</h3>
+                <p>Participated in NASA's International Space Apps Challenge, developing innovative solutions for space exploration 
+                challenges.</p>
+                <div class="tech-tags">
+                    <span class="tag">NASA</span>
+                    <span class="tag">Data Viz</span>
+                    <span class="tag">Sustainability</span>
                 </div>
+                <a href="https://www.spaceappschallenge.org/2025/find-a-team/terrazoomer/?tab=project" target="_blank" style="color:var(--primary); font-weight:600; text-decoration:none; display:block; margin-top:8px;">View Full Project →</a>
             </div>
-
-            <div class="experience-item">
-                <div class="exp-text">
-                    <h3>Volunteer — ProAstro STEM Technopark</h3>
-                    <div class="experience-meta">Kyrgyzstan's First STEM Science & Technology Park | 2024 — 2025</div>
-                    <p>Volunteered at ProAstro, assisting in prototyping and preparing exhibition projects. Helped organize educational 
-                    activities and workshops for visitors, contributing to promoting STEM education and innovation culture in Kyrgyzstan.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== PROJECTS ========== -->
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <p class="section-intro">Click images/videos to view in full screen. Photo galleries include navigation arrows.</p>
-
-            <div class="projects-grid">
-                <!-- TODO: Add video 'videos/seeds-program.mp4' (1.5 min) -->
-                <article class="project-card">
-                    <div class="project-media" onclick="openLightboxVideo('huaweisftfvideo.mp4')">
-                        <video controls preload="metadata">
-                            <source src="huaweisftfvideo.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="project-content">
-                        <h3>Huawei — Seeds for the Future</h3>
-                        <p>Global training program on telecommunications, 5G, cloud computing, and AI technologies. Participated in 2025, 
-                        developing leadership and innovation skills through international collaboration.</p>
-                        <div class="tech-tags">
-                            <span class="tag">5G</span>
-                            <span class="tag">Cloud Computing</span>
-                            <span class="tag">AI</span>
-                            <span class="tag">Leadership</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- TODO: Add video 'videos/2d-manufacturing.mp4' (1 min) -->
-                <article class="project-card">
-                    <div class="project-media" onclick="openLightboxVideo('IMG_6133_compressed.mp4')">
-                        <video controls preload="metadata">
-                            <source src="IMG_6133_compressed.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="project-content">
-                        <h3>2D Manufacturing Workflow</h3>
-                        <p>Demonstration of laser cutting, CAD-to-fabrication workflow, and rapid prototyping techniques from FabLab 
-                        instruction sessions. Showcases the complete process from design to finished product.</p>
-                        <div class="tech-tags">
-                            <span class="tag">Laser Cutting</span>
-                            <span class="tag">CAD</span>
-                            <span class="tag">Prototyping</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- TODO: Add video 'videos/nasa-hackathon.mp4' and update the project link -->
-                <article class="project-card">
-                    <div class="project-media" onclick="openLightboxVideo('IMG_4666.mp4')">
-                        <video controls preload="metadata">
-                            <source src="IMG_4666.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="project-content">
-                        <h3>NASA Space Apps — Hackathon Project</h3>
-                        <p>Participated in NASA's International Space Apps Challenge, developing innovative solutions for space exploration 
-                        challenges.</p>
-                        <div class="tech-tags">
-                            <span class="tag">NASA</span>
-                            <span class="tag">Data Viz</span>
-                            <span class="tag">Sustainability</span>
-                        </div>
-                        <!-- TODO: Replace with your actual NASA project link -->
-                        <a href="https://www.spaceappschallenge.org/2025/find-a-team/terrazoomer/?tab=project" target="_blank" style="color:var(--primary); font-weight:600; text-decoration:none; display:block; margin-top:8px;">View Full Project →</a>
-                    </div>
-                </article>
+        </article>
+    </div>
+</section>
 
                 <!-- TODO: Add 5 photos: maglev-1.jpg through maglev-5.jpg in /projects/ folder -->
                 <article class="project-card">
@@ -777,9 +797,3 @@ header h1 {
     </script>
 </body>
 </html>
-
-
-
-
-
-
