@@ -15,12 +15,22 @@
             --max-width: 1200px;
         }
         body{
-            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            color: var(--dark);
-            background: var(--gray);
-            line-height: 1.5;
-        }
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: #1a1a1a;              /* немного темнее, чем раньше */
+    background: var(--gray);
+    line-height: 1.65;           /* чуть увеличено для удобства чтения */
+    font-size: 1.05rem;          /* чуть крупнее текст */
+            p, .section-intro, .experience-meta, .skill-list li, .project-content p {
+    color: #2a2a2a;              /* делает серый текст чуть темнее */
+    font-size: 1.03rem;          /* слегка увеличен размер */
+    line-height: 1.7;            /* удобное расстояние между строками */
+}
 
+h1, h2, h3, h4 {
+    color: #111111;              /* заголовки чуть насыщеннее */
+}
+
+}
         /* ========== HEADER ==========  */
         header{
             min-height: 360px;
@@ -747,6 +757,7 @@ For now, I'm just focused on learning as much as I can. Every project teaches me
     </script>
 </body>
 </html>
+
 
 
 
