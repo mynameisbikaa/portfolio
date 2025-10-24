@@ -794,6 +794,35 @@ header h1 {
             }
         });
     });
+        <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const videos = document.querySelectorAll("video");
+
+  // Добавляем нужные атрибуты
+  videos.forEach(video => {
+    video.muted = true;
+    video.playsInline = true;
+    video.loop = true;
+    video.preload = "none";
+  });
+
+  // Наблюдатель для "ленивого автоплея"
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        video.play().catch(() => {}); // запускаем видео при появлении
+      } else {
+        video.pause(); // останавливаем, если ушло с экрана
+      }
+    });
+  }, { threshold: 0.5 }); // видео должно быть видно хотя бы на 50%
+
+  videos.forEach(video => observer.observe(video));
+});
+</script>
+
     </script>
 </body>
 </html>
+
