@@ -16,7 +16,7 @@
         }
         header h1 {
     color: var(--primary);}
-        /* ====== TEXT STYLE FIX ====== */
+
 body {
     font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     color: #1a1a1a;
@@ -39,7 +39,6 @@ header h1 {
     color: var(--primary);
 }
 
-        /* ========== HEADER ==========  */
         header{
             min-height: 360px;
             display:flex;
@@ -80,7 +79,6 @@ header h1 {
 
         .section-intro{ color:var(--muted); margin: 12px 0 20px; max-width:900px; }
 
-        /* ========== PROJECTS GRID ========== */
         .projects-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:18px; }
         .project-card{ 
             background:var(--white); 
@@ -117,7 +115,6 @@ header h1 {
             font-weight:600; 
         }
 
-        /* ========== EXPERIENCE ========== */
         .experience-item{ 
             background:var(--light); 
             padding:18px; 
@@ -143,14 +140,14 @@ header h1 {
         .exp-text h3{ margin-bottom: 6px; }
         .experience-meta{ color: var(--muted); font-size: 0.9rem; margin-bottom: 8px; }
 
-        /* ========== SKILLS GRID ========== */
+       
         .skills-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:12px; margin-top:12px; }
         .skill-card{ background:var(--white); padding:16px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.03); }
         .skill-card h4{ margin-bottom: 10px; }
         .skill-list{ list-style:none; color:var(--muted); margin-top:8px; }
         .skill-list li{ padding: 4px 0; }
 
-        /* ========== CERTIFICATES ========== */
+       
         .cert-link{ 
             display:inline-block; 
             padding:12px 20px; 
@@ -163,10 +160,10 @@ header h1 {
         }
         .cert-link:hover{ background: #c41218; }
 
-        /* ========== ACHIEVEMENTS ========== */
+       
         .achievements-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:12px; }
 
-        /* ========== CONTACT ========== */
+       
         .contact-section{ background:var(--dark); color:#fff; padding:32px; text-align:center; border-radius:10px; }
         .contact-links{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:16px; }
         .contact-btn{ 
@@ -182,7 +179,7 @@ header h1 {
         .contact-btn.secondary{ background:transparent; border:2px solid #fff; color:#fff; }
         .contact-btn.secondary:hover{ background:#fff; color:var(--dark); }
 
-        /* ========== LIGHTBOX ========== */
+        
         .lightbox{ 
             display:none; 
             position:fixed; 
@@ -251,7 +248,6 @@ header h1 {
 </head>
 <body>
 
-    <!-- ========== HEADER ========== -->
     <header>
         <div class="header-content">
             <img class="profile-img" src="Screenshot 2025-10-20 011352.png" alt="Aibike Moldobaeva">
@@ -261,7 +257,6 @@ header h1 {
         </div>
     </header>
 
-    <!-- ========== NAVIGATION ========== -->
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -275,7 +270,7 @@ header h1 {
     </nav>
 
     <main class="container">
-        <!-- ========== ABOUT ========== -->
+    
         <section id="about">
     <h2>About Me</h2>
 
@@ -296,12 +291,10 @@ header h1 {
     </p>
 </section>
 
-    <!-- ========== EXPERIENCE ========== -->
 <section id="experience">
     <h2>Experience</h2>
     <p class="section-intro">Click images/videos to view in full screen :)</p>
 
-    <!-- ✅ FabLab video - АВТОПЛЕЙ БЕЗ ЗВУКА -->
     <div class="experience-item">
         <div class="exp-media" onclick="openLightboxVideo('фаблабвидео.mp4')">
             <video 
@@ -321,7 +314,6 @@ header h1 {
         </div>
     </div>
 
-    <!-- ✅ University - ДОБАВЬ СЮДА ФОТО: images/manas-campus.jpg -->
    <div class="experience-item">
         <div class="exp-media" onclick="openLightboxGallery('university')">
             <img src="uni1.jpg" alt="Kyrgyz-Turkish Manas University" loading="lazy">
@@ -338,7 +330,6 @@ header h1 {
         </div>
     </div>
 
-    <!-- ✅ Huawei - ДОБАВЬ СЮДА ФОТО: images/huawei-seeds.jpg -->
    <div class="experience-item">
         <div class="exp-media" onclick="openLightboxGallery('huawei')">
             <img src="sftf3.jpg" alt="Huawei Seeds for the Future" loading="lazy">
@@ -371,14 +362,11 @@ header h1 {
     </div>
 </section>
 
-
-<!-- ========== PROJECTS ========== -->
 <section id="projects">
     <h2>Featured Projects</h2>
     <p class="section-intro">Click images/videos to view in full screen :)</p>
 
     <div class="projects-grid">
-        <!-- ✅ Huawei Project - АВТОПЛЕЙ -->
         <article class="project-card">
             <div class="project-media" onclick="openLightboxVideo('huaweisftfvideo.mp4')">
                 <video 
@@ -403,7 +391,6 @@ header h1 {
             </div>
         </article>
 
-        <!-- ✅ 2D Manufacturing - АВТОПЛЕЙ -->
         <article class="project-card">
             <div class="project-media" onclick="openLightboxVideo('IMG_6133_compressed.mp4')">
                 <video 
@@ -427,7 +414,6 @@ header h1 {
             </div>
         </article>
 
-        <!-- ✅ NASA Project - АВТОПЛЕЙ -->
         <article class="project-card">
             <div class="project-media" onclick="openLightboxVideo('IMG_4666.mp4')">
                 <video 
@@ -452,7 +438,6 @@ header h1 {
             </div>
         </article>
 
-                <!-- Maglev Train - МАЛЕНЬКАЯ КАРТОЧКА -->
                 <article class="project-card">
                     <div class="project-media" onclick="openLightboxGallery('maglev')">
                         <img src="maglev2.jpg" alt="Maglev Train Prototype">
@@ -469,7 +454,6 @@ header h1 {
                     </div>
                 </article>
 
-                <!-- FANTOMAT - МАЛЕНЬКАЯ КАРТОЧКА -->
                 <article class="project-card">
                     <div class="project-media" onclick="openLightboxGallery('fantomat')">
                         <img src="photo_2025-10-18_00-02-17.jpg" alt="FANTOMAT Reverse Vending Machine">
@@ -503,7 +487,6 @@ header h1 {
             </div>
         </section>
  
-        <!-- ========== SKILLS & TOOLS ========== -->
         <section id="skills">
             <h2>Skills & Tools</h2>
             <div class="skills-grid">
@@ -555,25 +538,23 @@ header h1 {
             </div>
         </section>
 
-        <!-- ========== PHOTO GALLERY ========== -->
-        <!-- ДОБАВЬ СЮДА ФОТО: projects/debate-1.jpg, debate-2.jpg, debate-3.jpg, debate-4.jpg -->
         <section id="photos">
             <h2>Photo Gallery</h2>
             <p class="section-intro">Moments from various activities, competitions, and university life.</p>
             <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr));">
                 <div class="project-card">
-                    <div class="project-media" onclick="openLightboxImage('projects/debate-1.jpg')">
-                        <img src="projects/debate-1.jpg" alt="University Activity">
+                    <div class="project-media" >
+                        <img src="gallery2.jpg" alt="University Activity">
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-media" onclick="openLightboxImage('projects/debate-2.jpg')">
-                        <img src="projects/debate-2.jpg" alt="Competition">
+                    <div class="project-media">
+                        <img src="gallery1.jpg" alt="Competition">
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-media" onclick="openLightboxImage('projects/debate-3.jpg')">
-                        <img src="projects/debate-3.jpg" alt="Event">
+                    <div class="project-media">
+                        <img src="proastro3.jpg" alt="Event">
                     </div>
                 </div>
                 <div class="project-card">
@@ -584,7 +565,6 @@ header h1 {
             </div>
         </section>
 
-        <!-- ========== CERTIFICATES & TRAINING ========== -->
         <section id="certificates">
             <div style="background: var(--light); padding: 24px; border-radius: 10px; border-left: 4px solid var(--primary); margin-bottom: 24px;">
                 <h4 style="margin-bottom: 16px; font-size: 1.2rem;">Certificates:</h4>
@@ -602,8 +582,7 @@ header h1 {
                 </a>
             </div>
         </section>
-
-        <!-- ========== ACHIEVEMENTS ========== -->
+        
         <section id="achievements">
             <h2>Achievements </h2>
             <div class="achievements-grid">
@@ -794,14 +773,3 @@ debate: [
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
