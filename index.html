@@ -243,6 +243,10 @@ header h1 {
             h1{ font-size: 1.6rem; }
             .projects-grid{ grid-template-columns: 1fr; }
         }
+        .project-media video {
+    pointer-events: none;
+}
+
     </style>
 </head>
 <body>
@@ -681,14 +685,14 @@ header h1 {
             'maglev1.jpg',
             'maglev3.jpg',
             'maglev.jpg',
-            'maglev4.jpg'
-            'maglev5.jpg'
+            'maglev4.jpg',
+            'maglev5.jpg',
             'maglev6.jpg'
         ],
         fantomat: [
             'fantomat1.jpg',
             'fantomat2.jpg',
-            'fantomat.jpg',
+            'fantomat.jpg'
         ],
             university: [
     'images/manas-campus.jpg',     
@@ -701,9 +705,8 @@ huawei: [
     'images/huawei-seeds-3.jpg'    
 ],
 debate: [
-    'projects/debate-1.jpg',        // ← ВСЕ ТВОИ
-    'projects/debate-2.jpg',        // ← ФОТО ДЛЯ
-    ...                         
+    'projects/debate-1.jpg',        
+    'projects/debate-2.jpg'             
 ]
         
     };
@@ -786,5 +789,6 @@ debate: [
     </script>
 </body>
 </html>
+
 
 
