@@ -668,22 +668,15 @@ header h1 {
         <!-- NEW: On Process Section -->
         <section id="on-process">
             <h2>On Process <span class="process-badge">⚡ ACTIVE</span></h2>
-            <p class="section-intro">Current project I'm working on — Click video to view full screen</p>
+            <p class="section-intro">Current project I'm working on — Click image to view full screen</p>
 
             <div class="experience-item process-item">
-                <div class="exp-media" onclick="openLightboxVideo('robot_process.mp4')">
-                    <video 
-                        autoplay
-                        loop
-                        muted 
-                        playsinline 
-                        preload="auto">
-                        <source src="robot_process.mp4" type="video/mp4">
-                    </video>
+                <div class="exp-media" onclick="openLightboxImage('robot_process.jpg')">
+                    <img src="robot_process.jpg" alt="Autonomous Line-Following Robot" loading="lazy">
                 </div>
                 <div class="exp-text">
                     <h3>🤖 Autonomous Line-Following Robot</h3>
-                    <div class="experience-meta">Started: February 2025 · In Progress</div>
+                    <div class="experience-meta">Started: February 2026 · In Progress</div>
                     <p>
                         Currently designing and building an advanced line-following robot for an upcoming university robotics competition. 
                         The robot uses infrared sensors for precise line detection and incorporates obstacle avoidance capabilities using ultrasonic sensors.
@@ -694,10 +687,6 @@ header h1 {
                         • Real-time decision-making system for complex track scenarios<br>
                         • Custom PCB design for better circuit integration and reliability<br>
                         • 3D-printed chassis optimized for weight distribution and stability
-                    </p>
-                    <p style="margin-top: 12px; color: var(--muted);">
-                        <strong>Current Status:</strong> Hardware assembly complete, now fine-tuning PID parameters and testing on various track configurations. 
-                        Working on improving corner-taking speed and junction detection accuracy.
                     </p>
                     <div class="tech-tags" style="margin-top: 12px;">
                         <span class="tag">Arduino</span>
@@ -792,7 +781,7 @@ header h1 {
                 <p style="margin: 12px 0; opacity: 0.95;">Follow for more video edits, transitions, and creative projects</p>
                 <a href="https://www.instagram.com/bikaboo_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link">
                     <span style="font-size: 1.5rem;">📸</span>
-                    @aibike.editz
+                    @bikaboo_
                 </a>
                 <p style="margin-top: 16px; font-size: 0.9rem; opacity: 0.85;">
                     Motion graphics · Transitions · Creative edits · Adobe After Effects
@@ -809,7 +798,7 @@ header h1 {
                 <div class="presentation-text">
                     <h3>Download My Full Presentation</h3>
                     <p>A comprehensive overview of my journey, projects, skills, and achievements in a professional PowerPoint format.</p>
-                    <a href="https://1drv.ms/p/c/7843f33f9986358e/IQAZ6k9i1XNpTL9RW0iWI3eGAb5GLcIWkrYY5sUpHcd9A0I?e=6ZAErg" download class="download-btn">
+                    <a href="https://1drv.ms/p/c/7843f33f9986358e/IQAZ6k9i1XNpTL9RW0iWI3eGAb5GLcIWkrYY5sUpHcd9A0I?e=6ZAErg" target="_blank" class="download-btn">
                         <span>⬇️</span>
                         Download Presentation (PPTX)
                     </a>
@@ -824,7 +813,7 @@ header h1 {
                     <h4>Programming & Software</h4>
                     <ul class="skill-list">
                         <li>C / C++ (Arduino, Embedded)</li>
-                        <li>Python </li>
+                        <li>Python</li>
                         <li>MATLAB & Simulink</li>
                         <li>Proteus (Circuit Simulation)</li>
                         <li>TinkerCAD</li>
@@ -931,8 +920,8 @@ header h1 {
                     📱 +996 708 072 286
                 </p>
                 <div class="contact-links">
-                    <a class="contact-btn" href="/cdn-cgi/l/email-protection#f1909893989a949c9e9d959e9390948790b1969c90989ddf929e9c">
-                        📧 <span class="__cf_email__" data-cfemail="83e2eae1eae8e6eeecefe7ece1e2e6f5e2c3e4eee2eaefade0ecee">[email&#160;protected]</span>
+                    <a class="contact-btn" href="mailto:aibikemoldobaeva@gmail.com">
+                        📧 aibikemoldobaeva@gmail.com
                     </a>
                     <a class="contact-btn secondary" href="https://github.com/mynameisbikaa" target="_blank">
                         💻 GitHub
@@ -946,13 +935,13 @@ header h1 {
 
         <!-- NEW: Last Updated -->
         <div class="last-updated">
-            ⏱️ Last updated: <span id="last-update-date">February 11, 2025</span>
+            ⏱️ Last updated: <span id="last-update-date">February 14, 2026</span>
         </div>
     </main>
     
+    <!-- LIGHTBOX - NO CLOSE BUTTON HERE -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <div class="lightbox-content" id="lightbox-content" onclick="event.stopPropagation()">
-            <div class="lightbox-close" onclick="closeLightbox()">×</div>
         </div>
     </div>
 
@@ -961,7 +950,7 @@ header h1 {
         <p style="margin-top: 8px; font-size: 0.85rem;">Electrical & Electronics Engineering | Kyrgyz-Turkish Manas University</p>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
     const galleries = {
         maglev: [
             'maglev2.jpg',
@@ -977,32 +966,34 @@ header h1 {
             'fantomat2.jpg',
             'fantomat.jpg'
         ],
-            university: [
-    'uni1.jpg',     
-    'uni2.jpg',    
-    'uni3.jpg'    
-],
-huawei: [
-    'sftf3.jpg',      
-    'sftf2.jpg',
-    'sftf8.jpg',    
-    'sftf9.jpg',    
-    'sftf5.jpg',    
-    'sftf1.jpg',
-    'sftf7.jpg',
-    'sftf4.jpg',
-    'sftf6.jpg'
-],
-debate: [
-    'debate.jpg',
-    'debate4.jpg',
-    'debate2.jpg',
-    'debate1.jpg',
-    'debate5.jpg'
-]
+        university: [
+            'uni1.jpg',     
+            'uni2.jpg',    
+            'uni3.jpg'    
+        ],
+        huawei: [
+            'sftf3.jpg',      
+            'sftf2.jpg',
+            'sftf8.jpg',    
+            'sftf9.jpg',    
+            'sftf5.jpg',    
+            'sftf1.jpg',
+            'sftf7.jpg',
+            'sftf4.jpg',
+            'sftf6.jpg'
+        ],
+        debate: [
+            'debate.jpg',
+            'debate4.jpg',
+            'debate2.jpg',
+            'debate1.jpg',
+            'debate5.jpg'
+        ]
     };
+    
     const lightbox = document.getElementById('lightbox');
     const lightboxContent = document.getElementById('lightbox-content');
+    
     function openLightboxImage(src){
         lightboxContent.innerHTML = `
             <div class="lightbox-close" onclick="closeLightbox()">×</div>
@@ -1010,6 +1001,7 @@ debate: [
         `;
         lightbox.classList.add('active');
     }
+    
     function openLightboxVideo(src){
         lightboxContent.innerHTML = `
             <div class="lightbox-close" onclick="closeLightbox()">×</div>
@@ -1018,7 +1010,15 @@ debate: [
             </video>
         `;
         lightbox.classList.add('active');
+        
+        // Ensure video plays with sound
+        const video = lightboxContent.querySelector('video');
+        if(video) {
+            video.muted = false;
+            video.play().catch(e => console.log('Autoplay prevented:', e));
+        }
     }
+    
     function openLightboxGallery(galleryId){
         const photos = galleries[galleryId];
         if(!photos || photos.length === 0) {
@@ -1057,15 +1057,18 @@ debate: [
         renderGallery();
         lightbox.classList.add('active');
     }
+    
     function closeLightbox(){
         lightbox.classList.remove('active');
         lightboxContent.innerHTML = '';
     }
+    
     document.addEventListener('keydown', (e) => {
         if(e.key === 'Escape' && lightbox.classList.contains('active')) {
             closeLightbox();
         }
     });
+    
     document.querySelectorAll('nav a').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -1079,4 +1082,12 @@ debate: [
 
     // Auto-update last modified date
     function updateLastModified() {
-        const lastUpdate = document.getElementById('last-update-
+        const lastUpdate = document.getElementById('last-update-date');
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        lastUpdate.textContent = today.toLocaleDateString('en-US', options);
+    }
+    updateLastModified();
+    </script>
+</body>
+</html>
