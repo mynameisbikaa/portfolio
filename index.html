@@ -210,18 +210,6 @@ header h1 {
         .contact-btn.secondary:hover{ background:#fff; color:var(--dark); }
 
         /* Edits Section Styles */
-        .edits-showcase {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            padding: 32px;
-            border-radius: 12px;
-            color: white;
-            text-align: center;
-        }
-        .edits-showcase h3 {
-            color: white;
-            margin-bottom: 12px;
-            font-size: 1.5rem;
-        }
         .instagram-link {
             display: inline-flex;
             align-items: center;
@@ -671,8 +659,8 @@ header h1 {
             <p class="section-intro">Current project I'm working on — Click image to view full screen</p>
 
             <div class="experience-item process-item">
-                <div class="exp-media" onclick="openLightboxImage('Screenshot 2026-02-14 131340.png')">
-                    <img src="Screenshot 2026-02-14 131340.png" alt="Autonomous Line-Following Robot" loading="lazy">
+                <div class="exp-media" onclick="openLightboxImage('Screenshot_2026-02-14_133646.png')">
+                    <img src="Screenshot_2026-02-14_133646.png" alt="Autonomous Line-Following Robot" loading="lazy">
                 </div>
                 <div class="exp-text">
                     <h3>🤖 Autonomous Line-Following Robot</h3>
@@ -699,7 +687,7 @@ header h1 {
             </div>
         </section>
 
-        <!-- NEW: Edits Section -->
+        <!-- NEW: Edits Section - COMPACT VERSION -->
         <section id="edits">
             <h2>Video Edits</h2>
             <p class="section-intro">
@@ -707,9 +695,9 @@ header h1 {
                 — Click any video to watch in full screen
             </p>
             
-            <!-- Video Gallery -->
+            <!-- Video Gallery with Instagram card integrated -->
             <div class="projects-grid">
-                <!-- Edit 1 - No description -->
+                <!-- Edit 1 -->
                 <article class="project-card">
                     <div class="project-media" onclick="openLightboxVideo('unknown-KREAYSHAWN - MISSING KITTY_3 (1).mp4')">
                         <video 
@@ -723,7 +711,7 @@ header h1 {
                     </div>
                 </article>
 
-                <!-- Edit 2 - No description -->
+                <!-- Edit 2 -->
                 <article class="project-card">
                     <div class="project-media" onclick="openLightboxVideo('takemichi.mp4')">
                         <video 
@@ -737,7 +725,7 @@ header h1 {
                     </div>
                 </article>
 
-                <!-- Edit 3 - No description -->
+                <!-- Edit 3 -->
                 <article class="project-card">
                     <div class="project-media" onclick="openLightboxVideo('1437813576_334258762841_2.mp4')">
                         <video 
@@ -751,7 +739,7 @@ header h1 {
                     </div>
                 </article>
 
-                <!-- Edit 4 - NASA Space Apps with description -->
+                <!-- Edit 4 - NASA -->
                 <article class="project-card">
                     <div class="project-media" onclick="openLightboxVideo('Aibike_spaceappchallenge_2 (2).mp4')">
                         <video 
@@ -765,8 +753,7 @@ header h1 {
                     </div>
                     <div class="project-content">
                         <h3>🚀 NASA Space Apps Challenge</h3>
-                        <p>Animation video created for NASA Space Apps Challenge hackathon project celebrating 25 years of TERRA satellite. 
-                        Edited and animated in Adobe After Effects.</p>
+                        <p>Animation video for NASA Space Apps Challenge celebrating 25 years of TERRA satellite.</p>
                         <div class="tech-tags">
                             <span class="tag">After Effects</span>
                             <span class="tag">Motion Graphics</span>
@@ -774,18 +761,23 @@ header h1 {
                         </div>
                     </div>
                 </article>
-            </div>
 
-            <div class="edits-showcase" style="margin-top: 32px;">
-                <h3>✨ See More on Instagram</h3>
-                <p style="margin: 12px 0; opacity: 0.95;">Follow for more video edits, transitions, and creative projects</p>
-                <a href="https://www.instagram.com/bikaboo_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link">
-                    <span style="font-size: 1.5rem;">📸</span>
-                    @bikaboo_
-                </a>
-                <p style="margin-top: 16px; font-size: 0.9rem; opacity: 0.85;">
-                    Motion graphics · Transitions · Creative edits · Adobe After Effects
-                </p>
+                <!-- Instagram Card - Same Grid -->
+                <article class="project-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="project-content" style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 32px 20px;">
+                        <h3 style="color: white; margin-bottom: 16px; font-size: 1.25rem;">✨ See More</h3>
+                        <p style="color: rgba(255,255,255,0.95); margin-bottom: 20px; font-size: 0.95rem;">
+                            Follow for more edits & transitions
+                        </p>
+                        <a href="https://www.instagram.com/bikaboo_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link" style="margin-top: 0;">
+                            <span style="font-size: 1.5rem;">📸</span>
+                            @bikaboo_
+                        </a>
+                        <p style="color: rgba(255,255,255,0.85); margin-top: 16px; font-size: 0.85rem;">
+                            Motion graphics · Adobe AE
+                        </p>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -856,8 +848,6 @@ header h1 {
             </div>
         </section>
 
-       
-
         <section id="certificates">
             <div style="background: var(--light); padding: 24px; border-radius: 10px; border-left: 4px solid var(--primary); margin-bottom: 24px;">
                 <h4 style="margin-bottom: 16px; font-size: 1.2rem;">Certificates:</h4>
@@ -904,7 +894,6 @@ header h1 {
                         exhibition projects and organizing educational activities.
                     </p>
                 </div>
-               
             </div>
         </section>
 
@@ -934,7 +923,7 @@ header h1 {
         </div>
     </main>
     
-    <!-- LIGHTBOX - NO CLOSE BUTTON HERE -->
+    <!-- LIGHTBOX -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <div class="lightbox-content" id="lightbox-content" onclick="event.stopPropagation()">
         </div>
@@ -947,42 +936,11 @@ header h1 {
 
     <script>
     const galleries = {
-        maglev: [
-            'maglev2.jpg',
-            'maglev1.jpg',
-            'maglev3.jpg',
-            'maglev.jpg',
-            'maglev4.jpg',
-            'maglev5.jpg',
-            'maglev6.jpg'
-        ],
-        fantomat: [
-            'fantomat1.jpg',
-            'fantomat2.jpg'
-        ],
-        university: [
-            'uni1.jpg',     
-            'uni2.jpg',    
-            'uni3.jpg'    
-        ],
-        huawei: [
-            'sftf3.jpg',      
-            'sftf2.jpg',
-            'sftf8.jpg',    
-            'sftf9.jpg',    
-            'sftf5.jpg',    
-            'sftf1.jpg',
-            'sftf7.jpg',
-            'sftf4.jpg',
-            'sftf6.jpg'
-        ],
-        debate: [
-            'debate.jpg',
-            'debate4.jpg',
-            'debate2.jpg',
-            'debate1.jpg',
-            'debate5.jpg'
-        ]
+        maglev: ['maglev2.jpg', 'maglev1.jpg', 'maglev3.jpg', 'maglev.jpg', 'maglev4.jpg', 'maglev5.jpg', 'maglev6.jpg'],
+        fantomat: ['fantomat1.jpg', 'fantomat2.jpg', 'fantomat.jpg'],
+        university: ['uni1.jpg', 'uni2.jpg', 'uni3.jpg'],
+        huawei: ['sftf3.jpg', 'sftf2.jpg', 'sftf8.jpg', 'sftf9.jpg', 'sftf5.jpg', 'sftf1.jpg', 'sftf7.jpg', 'sftf4.jpg', 'sftf6.jpg'],
+        debate: ['debate.jpg', 'debate4.jpg', 'debate2.jpg', 'debate1.jpg', 'debate5.jpg']
     };
     
     const lightbox = document.getElementById('lightbox');
@@ -1004,8 +962,6 @@ header h1 {
             </video>
         `;
         lightbox.classList.add('active');
-        
-        // Ensure video plays with sound
         const video = lightboxContent.querySelector('video');
         if(video) {
             video.muted = false;
@@ -1074,7 +1030,6 @@ header h1 {
         });
     });
 
-    // Auto-update last modified date
     function updateLastModified() {
         const lastUpdate = document.getElementById('last-update-date');
         const today = new Date();
@@ -1085,7 +1040,3 @@ header h1 {
     </script>
 </body>
 </html>
-
-
-
-
