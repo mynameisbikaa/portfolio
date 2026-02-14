@@ -134,11 +134,41 @@ header h1 {
             border-radius:8px; 
             overflow:hidden; 
         }
+        .exp-media.large-video {
+            width: 420px;
+            max-width: 45%;
+            height: 240px;
+        }
         .exp-media img{ width:100%; height:100%; object-fit:cover; display:block; }
         .exp-media video{ width:100%; height:100%; object-fit:cover; display:block; cursor:pointer; }
         .exp-text{ flex:1; }
         .exp-text h3{ margin-bottom: 6px; }
         .experience-meta{ color: var(--muted); font-size: 0.9rem; margin-bottom: 8px; }
+
+        /* Gallery indicator icon */
+        .gallery-indicator {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            pointer-events: none;
+            z-index: 5;
+        }
+        .gallery-indicator::before {
+            content: '🖼️';
+            font-size: 1.1rem;
+        }
+        .project-media, .exp-media {
+            position: relative;
+        }
 
        
         .skills-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:12px; margin-top:12px; }
@@ -179,6 +209,107 @@ header h1 {
         .contact-btn.secondary{ background:transparent; border:2px solid #fff; color:#fff; }
         .contact-btn.secondary:hover{ background:#fff; color:var(--dark); }
 
+        /* Edits Section Styles */
+        .edits-showcase {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 32px;
+            border-radius: 12px;
+            color: white;
+            text-align: center;
+        }
+        .edits-showcase h3 {
+            color: white;
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+        }
+        .instagram-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: white;
+            color: #f5576c;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 16px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .instagram-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        /* On Process Section */
+        .process-badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #111;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-left: 8px;
+        }
+        .process-item {
+            background: #fff7e6;
+            border-left: 4px solid #ffc107;
+        }
+
+        /* Presentation Download Box */
+        .presentation-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 28px;
+            border-radius: 12px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .presentation-icon {
+            font-size: 4rem;
+            opacity: 0.9;
+        }
+        .presentation-text {
+            flex: 1;
+            min-width: 250px;
+        }
+        .presentation-text h3 {
+            color: white;
+            margin-bottom: 8px;
+        }
+        .presentation-text p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 16px;
+        }
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: white;
+            color: #667eea;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Last Updated */
+        .last-updated {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+            padding: 16px;
+            background: var(--light);
+            border-radius: 8px;
+            margin-top: 40px;
+        }
         
         .lightbox{ 
             display:none; 
@@ -237,8 +368,10 @@ header h1 {
             header{ min-height:260px; padding:32px 16px; }
             .experience-item{ flex-direction: column; }
             .exp-media{ display:block; width:100%; max-width:100%; height:200px; }
+            .exp-media.large-video{ width:100%; max-width:100%; height:280px; }
             h1{ font-size: 1.6rem; }
             .projects-grid{ grid-template-columns: 1fr; }
+            .presentation-box{ flex-direction: column; text-align: center; }
         }
         .project-media video {
     pointer-events: none;
@@ -253,7 +386,7 @@ header h1 {
             <img class="profile-img" src="Screenshot 2025-10-20 011352.png" alt="Aibike Moldobaeva">
             <h1>Aibike Moldobaeva</h1>
             <div class="subtitle">Electrical & Electronics Engineering Student — Kyrgyz-Turkish Manas University</div>
-            <div class="tagline">IoT · Embedded Systems · Fabrication Lab Instructor · STEM Volunteer</div>
+            <div class="tagline">IoT · Embedded Systems · Fabrication Lab Instructor · STEM Volunteer · Content Creator</div>
         </div>
     </header>
 
@@ -262,6 +395,9 @@ header h1 {
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#on-process">On Process</a></li>
+            <li><a href="#edits">Edits</a></li>
+            <li><a href="#presentation">Presentation</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#certificates">Certificates</a></li>
             <li><a href="#achievements">Achievements</a></li>
@@ -277,7 +413,7 @@ header h1 {
 
   <p class="section-intro">
     I'm a third-year Electrical and Electronics Engineering student at Kyrgyz-Turkish Manas University in Bishkek.
-    I’m passionate about robotics, embedded systems, and the creative side of engineering — turning ideas into real, working prototypes.
+    I'm passionate about robotics, embedded systems, and the creative side of engineering — turning ideas into real, working prototypes.
   </p>
 
   <p class="section-intro">
@@ -286,12 +422,12 @@ header h1 {
   </p>
 
   <p class="section-intro">
-    I plan to continue my academic journey through a Master’s and later a PhD, focusing on research and innovation.
+    I plan to continue my academic journey through a Master's and later a PhD, focusing on research and innovation.
     My goal is to contribute to developing technologies that make a real impact and eventually share that experience through teaching.
   </p>
 
   <p class="section-intro">
-    For now, I’m focused on learning, experimenting, and growing with every project I take on.
+    For now, I'm focused on learning, experimenting, and growing with every project I take on.
   </p>
           
             <p class="section-intro">Moments from various activities, competitions, and university life.</p>
@@ -325,7 +461,7 @@ header h1 {
     <p class="section-intro">Click images/videos to view in full screen :)</p>
 
     <div class="experience-item">
-        <div class="exp-media" onclick="openLightboxVideo('фаблабвидео.mp4')">
+        <div class="exp-media large-video" onclick="openLightboxVideo('фаблабвидео.mp4')">
             <video 
                 autoplay
                 loop
@@ -346,6 +482,7 @@ header h1 {
    <div class="experience-item">
         <div class="exp-media" onclick="openLightboxGallery('university')">
             <img src="uni1.jpg" alt="Kyrgyz-Turkish Manas University" loading="lazy">
+            <div class="gallery-indicator">Gallery</div>
         </div>
         <div class="exp-text">
             <h3>Kyrgyz-Turkish Manas University</h3>
@@ -365,6 +502,7 @@ header h1 {
    <div class="experience-item">
         <div class="exp-media" onclick="openLightboxGallery('huawei')">
             <img src="sftf3.jpg" alt="Huawei Seeds for the Future" loading="lazy">
+            <div class="gallery-indicator">Gallery</div>
         </div>
         <div class="exp-text">
             <h3>Huawei — Seeds for the Future</h3>
@@ -478,6 +616,7 @@ header h1 {
                 <article class="project-card">
                     <div class="project-media" onclick="openLightboxGallery('maglev')">
                         <img src="maglev2.jpg" alt="Maglev Train Prototype">
+                        <div class="gallery-indicator">Gallery</div>
                     </div>
                     <div class="project-content">
                         <h3>Maglev Train Prototype — 1st Place</h3>
@@ -494,6 +633,7 @@ header h1 {
                 <article class="project-card">
                     <div class="project-media" onclick="openLightboxGallery('fantomat')">
                         <img src="photo_2025-10-18_00-02-17.jpg" alt="FANTOMAT Reverse Vending Machine">
+                        <div class="gallery-indicator">Gallery</div>
                     </div>
                     <div class="project-content">
                         <h3>FANTOMAT — Reverse Vending System</h3>
@@ -510,6 +650,7 @@ header h1 {
                 <article class="project-card">
                             <div class="project-media" onclick="openLightboxGallery('debate')">
                                 <img src="debate.jpg" alt="Manas University Debate Club">
+                                <div class="gallery-indicator">Gallery</div>
                             </div>
                             <div class="project-content">
                                 <h3>Manas University Debate Club</h3>
@@ -523,6 +664,158 @@ header h1 {
                         </article>
             </div>
         </section>
+
+        <!-- NEW: On Process Section -->
+        <section id="on-process">
+            <h2>On Process <span class="process-badge">⚡ ACTIVE</span></h2>
+            <p class="section-intro">Current project I'm working on — Click video to view full screen</p>
+
+            <div class="experience-item process-item">
+                <div class="exp-media" onclick="openLightboxVideo('robot_process.mp4')">
+                    <video 
+                        autoplay
+                        loop
+                        muted 
+                        playsinline 
+                        preload="auto">
+                        <source src="robot_process.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="exp-text">
+                    <h3>🤖 Autonomous Line-Following Robot</h3>
+                    <div class="experience-meta">Started: February 2025 · In Progress</div>
+                    <p>
+                        Currently designing and building an advanced line-following robot for an upcoming university robotics competition. 
+                        The robot uses infrared sensors for precise line detection and incorporates obstacle avoidance capabilities using ultrasonic sensors.
+                    </p>
+                    <p style="margin-top: 12px; color: var(--muted);">
+                        <strong>Key Features:</strong><br>
+                        • PID algorithm for smooth path tracking and speed optimization<br>
+                        • Real-time decision-making system for complex track scenarios<br>
+                        • Custom PCB design for better circuit integration and reliability<br>
+                        • 3D-printed chassis optimized for weight distribution and stability
+                    </p>
+                    <p style="margin-top: 12px; color: var(--muted);">
+                        <strong>Current Status:</strong> Hardware assembly complete, now fine-tuning PID parameters and testing on various track configurations. 
+                        Working on improving corner-taking speed and junction detection accuracy.
+                    </p>
+                    <div class="tech-tags" style="margin-top: 12px;">
+                        <span class="tag">Arduino</span>
+                        <span class="tag">Robotics</span>
+                        <span class="tag">PID Control</span>
+                        <span class="tag">Sensors</span>
+                        <span class="tag">3D Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Edits Section -->
+        <section id="edits">
+            <h2>Video Edits</h2>
+            <p class="section-intro">
+                My creative video editing projects crafted in <strong style="color: var(--primary);">Adobe After Effects</strong> 
+                — Click any video to watch in full screen
+            </p>
+            
+            <!-- Video Gallery -->
+            <div class="projects-grid">
+                <!-- Edit 1 - No description -->
+                <article class="project-card">
+                    <div class="project-media" onclick="openLightboxVideo('unknown-KREAYSHAWN - MISSING KITTY_3 (1).mp4')">
+                        <video 
+                            autoplay
+                            loop
+                            muted 
+                            playsinline 
+                            preload="auto">
+                            <source src="unknown-KREAYSHAWN - MISSING KITTY_3 (1).mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </article>
+
+                <!-- Edit 2 - No description -->
+                <article class="project-card">
+                    <div class="project-media" onclick="openLightboxVideo('takemichi #4 [1BCFBB3].mp4')">
+                        <video 
+                            autoplay
+                            loop
+                            muted 
+                            playsinline 
+                            preload="auto">
+                            <source src="takemichi #4 [1BCFBB3].mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </article>
+
+                <!-- Edit 3 - No description -->
+                <article class="project-card">
+                    <div class="project-media" onclick="openLightboxVideo('1437813576_334258762841_2.mp4')">
+                        <video 
+                            autoplay
+                            loop
+                            muted 
+                            playsinline 
+                            preload="auto">
+                            <source src="1437813576_334258762841_2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </article>
+
+                <!-- Edit 4 - NASA Space Apps with description -->
+                <article class="project-card">
+                    <div class="project-media" onclick="openLightboxVideo('Aibike_spaceappchallenge_2 (2).mp4')">
+                        <video 
+                            autoplay
+                            loop
+                            muted 
+                            playsinline 
+                            preload="auto">
+                            <source src="Aibike_spaceappchallenge_2 (2).mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-content">
+                        <h3>🚀 NASA Space Apps Challenge</h3>
+                        <p>Animation video created for NASA Space Apps Challenge hackathon project celebrating 25 years of TERRA satellite. 
+                        Edited and animated in Adobe After Effects.</p>
+                        <div class="tech-tags">
+                            <span class="tag">After Effects</span>
+                            <span class="tag">Motion Graphics</span>
+                            <span class="tag">NASA</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="edits-showcase" style="margin-top: 32px;">
+                <h3>✨ See More on Instagram</h3>
+                <p style="margin: 12px 0; opacity: 0.95;">Follow for more video edits, transitions, and creative projects</p>
+                <a href="https://www.instagram.com/bikaboo_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link">
+                    <span style="font-size: 1.5rem;">📸</span>
+                    @aibike.editz
+                </a>
+                <p style="margin-top: 16px; font-size: 0.9rem; opacity: 0.85;">
+                    Motion graphics · Transitions · Creative edits · Adobe After Effects
+                </p>
+            </div>
+        </section>
+
+        <!-- NEW: Presentation Section -->
+        <section id="presentation">
+            <h2>About Me Presentation</h2>
+            
+            <div class="presentation-box">
+                <div class="presentation-icon">📊</div>
+                <div class="presentation-text">
+                    <h3>Download My Full Presentation</h3>
+                    <p>A comprehensive overview of my journey, projects, skills, and achievements in a professional PowerPoint format.</p>
+                    <a href="https://1drv.ms/p/c/7843f33f9986358e/IQAZ6k9i1XNpTL9RW0iWI3eGAb5GLcIWkrYY5sUpHcd9A0I?e=6ZAErg" download class="download-btn">
+                        <span>⬇️</span>
+                        Download Presentation (PPTX)
+                    </a>
+                </div>
+            </div>
+        </section>
  
         <section id="skills">
             <h2>Skills & Tools</h2>
@@ -531,6 +824,7 @@ header h1 {
                     <h4>Programming & Software</h4>
                     <ul class="skill-list">
                         <li>C / C++ (Arduino, Embedded)</li>
+                        <li>Python </li>
                         <li>MATLAB & Simulink</li>
                         <li>Proteus (Circuit Simulation)</li>
                         <li>TinkerCAD</li>
@@ -557,7 +851,6 @@ header h1 {
                     <h4>Media & Visualization</h4>
                     <ul class="skill-list">
                         <li>Adobe After Effects</li>
-                        <li>Visual Content Creation</li>
                         <li>Microsoft Office Suite</li>
                         <li>Presentation & Documentation</li>
                     </ul>
@@ -638,8 +931,8 @@ header h1 {
                     📱 +996 708 072 286
                 </p>
                 <div class="contact-links">
-                    <a class="contact-btn" href="mailto:aibikemoldobaeva@gmail.com">
-                        📧 aibikemoldobaeva@gmail.com
+                    <a class="contact-btn" href="/cdn-cgi/l/email-protection#f1909893989a949c9e9d959e9390948790b1969c90989ddf929e9c">
+                        📧 <span class="__cf_email__" data-cfemail="83e2eae1eae8e6eeecefe7ece1e2e6f5e2c3e4eee2eaefade0ecee">[email&#160;protected]</span>
                     </a>
                     <a class="contact-btn secondary" href="https://github.com/mynameisbikaa" target="_blank">
                         💻 GitHub
@@ -650,6 +943,11 @@ header h1 {
                 </div>
             </div>
         </section>
+
+        <!-- NEW: Last Updated -->
+        <div class="last-updated">
+            ⏱️ Last updated: <span id="last-update-date">February 11, 2025</span>
+        </div>
     </main>
     
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
@@ -663,7 +961,7 @@ header h1 {
         <p style="margin-top: 8px; font-size: 0.85rem;">Electrical & Electronics Engineering | Kyrgyz-Turkish Manas University</p>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const galleries = {
         maglev: [
             'maglev2.jpg',
@@ -778,10 +1076,7 @@ debate: [
             }
         });
     });
-    </script>
-</body>
-</html>
 
-
-
-
+    // Auto-update last modified date
+    function updateLastModified() {
+        const lastUpdate = document.getElementById('last-update-
