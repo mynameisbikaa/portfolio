@@ -41,28 +41,58 @@ header h1 {
     color: #0A3323;
 }
     header{
-    min-height: 360px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:48px 20px;
-    background: linear-gradient(135deg, rgba(10,51,35,0.7), rgba(16,86,102,0.7)), url('Screenshot 2025-10-20 012321.png') center/cover no-repeat;
+            min-height: 280px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:48px 20px;
+            background: linear-gradient(135deg, rgba(30,30,30,0.75), rgba(45,45,45,0.75)), url('Screenshot 2025-10-20 012321.png') center/cover no-repeat;
             color: #fff;
             position: relative;
         }
         header h1 {
-    color: var(--primary) !important;
-}
-        .header-content{ max-width: var(--max-width); margin: 0 auto; z-index:1; }
-        .profile-img{
-    width:200px; height:200px; border-radius:50%; object-fit:cover;
-    border:6px solid #839958;
+            color: #F7F4D5 !important;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
-        h1{ font-size:2rem; margin-bottom:6px; font-weight:700; }
-        .subtitle{ opacity:0.95; margin-bottom:8px; }
-        .tagline{ opacity:0.9; max-width:720px; margin: 0 auto; }
-
+        .header-content{ 
+            max-width: var(--max-width); 
+            margin: 0 auto; 
+            z-index:1; 
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            width: 100%;}
+        .profile-img{
+            width:160px; 
+            height:160px; 
+            border-radius:50%; 
+            object-fit:cover;
+            border:5px solid #839958;
+            background:#eaeaea;
+            flex-shrink: 0;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+        .header-text {
+            flex: 1;
+            text-align: left;}
+        h1{ 
+            font-size:2.2rem; 
+            margin-bottom:10px; 
+            font-weight:700; 
+            color: #F7F4D5;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);}
+        .subtitle{ 
+            opacity:1; 
+            margin-bottom:8px; 
+            font-size: 1.1rem;
+            color: #F7F4D5;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);}
+        .tagline{ 
+            opacity:1; 
+            max-width:720px; 
+            font-size: 1rem;
+            color: #F7F4D5;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
         nav{
             background: var(--white);
             box-shadow: 0 2px 10px rgba(0,0,0,0.06);
@@ -356,8 +386,14 @@ header h1 {
 
         footer{ padding:30px 0; text-align:center; color:var(--muted); font-size:0.95rem; border-top: 1px solid #eee; margin-top: 40px; }
 
-        @media (max-width:900px){
-            header{ min-height:260px; padding:32px 16px; }
+       @media (max-width:900px){
+            header{ min-height:auto; padding:32px 16px; }
+            .header-content{ flex-direction: column; text-align: center; gap: 20px; }
+            .header-text{ text-align: center; }
+            .profile-img{ width: 140px; height: 140px; }
+            h1{ font-size: 1.7rem; }
+            .subtitle{ font-size: 1rem; }
+            .tagline{ font-size: 0.95rem; }
             .experience-item{ flex-direction: column; }
             .exp-media{ display:block; width:100%; max-width:100%; height:200px; }
             .exp-media.large-video{ width:100%; max-width:100%; height:280px; }
@@ -377,12 +413,14 @@ header h1 {
 </head>
 <body>
 
-    <header>
+   <header>
         <div class="header-content">
             <img class="profile-img" src="Screenshot 2026-03-04 233032.png" alt="Aibike Moldobaeva">
-            <h1>Aibike Moldobaeva</h1>
-            <div class="subtitle">Electrical & Electronics Engineering Student - Kyrgyz-Turkish Manas University</div>
-            <div class="tagline">IoT · Embedded Systems · Fabrication Lab Instructor · STEM Volunteer · Content Creator</div>
+            <div class="header-text">
+                <h1>Aibike Moldobaeva</h1>
+                <div class="subtitle">Electrical & Electronics Engineering Student - Kyrgyz-Turkish Manas University</div>
+                <div class="tagline">IoT · Embedded Systems · Fabrication Lab Instructor · STEM Volunteer · Content Creator</div>
+            </div>
         </div>
     </header>
 
@@ -1067,3 +1105,4 @@ header h1 {
     </script>
 </body>
 </html>
+
