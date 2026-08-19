@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aibike Moldobaeva - Electrical & Electronics Engineering 3rd year student</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        :root{
+    --primary: #003049;
+    --dark: #003049;
+    --light: #EAF3F8;
+    --muted: #780000;
+    --white: #fff;
+    --moss-green: #C1121F;
+    --beige: #EAF3F8;
+    --rosy-brown: #669BBC;
+    --midnight-green: #780000;
+    --varden: #AE1F23;
+    --max-width: 1200px;
+}
+        header h1 {
+    color: var(--primary);}
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: #1a1a1a;
+background: #ffffff;
+    line-height: 1.65;
+    font-size: 1.05rem;
+}
+p, .section-intro, .experience-meta, .skill-list li, .project-content p {
+    color: #2a2a2a;
+    font-size: 1.03rem;
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+    color: #111111;
+}
+
+header h1 {
+    color: #003049;
+}
+    header{
+            min-height: 280px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:48px 20px;
+            background: url('Screenshot 2025-10-20 012321.png') center/cover no-repeat;
+            color: #fff;
+            position: relative;
+        }
+        header::before{
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,48,73,0.78);
+        }
+        header h1 {
+            color: #FFFFFF !important;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .header-content{ 
+            max-width: var(--max-width); 
+            margin: 0 auto; 
+            position: relative;
+            z-index:1; 
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            width: 100%;}
+        .profile-img{
+            width:160px; 
+            height:160px; 
+            border-radius:50%; 
+            object-fit:cover;
+            border:5px solid #C1121F;
+            background:#eaeaea;
+            flex-shrink: 0;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+        .header-text {
+            flex: 1;
+            text-align: left;}
+        h1{ 
+            font-size:2.2rem; 
+            margin-bottom:10px; 
+            font-weight:700; 
+            color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);}
+        .subtitle{ 
+            opacity:1; 
+            margin-bottom:8px; 
+            font-size: 1.1rem;
+            color: #FFFFFF;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);}
+        .tagline{ 
+            opacity:1; 
+            max-width:720px; 
+            font-size: 1rem;
+            color: #FFFFFF;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        nav{
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            position: sticky; top: 0; z-index: 100;
+        }
+        nav ul{ display:flex; gap:18px; justify-content:center; list-style:none; padding:12px 20px; flex-wrap:wrap; }
+        nav a{ color:var(--dark); text-decoration:none; font-weight:600; transition: color 0.3s; }
+        nav a:hover{ color:var(--primary); }
+
+        .container{ max-width: var(--max-width); margin: 48px auto; padding: 0 20px; }
+
+        section{ margin-bottom:56px; }
+        h2{ font-size:1.6rem; margin-bottom:12px; display:inline-block; position:relative; }
+        h2::after{ content:''; display:block; height:4px; width:60px; background:#C1121F; margin-top:8px; }
+
+        .section-intro{ color:var(--muted); margin: 12px 0 20px; max-width:900px; }
+
+        .projects-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:18px; }
+        .project-card{ 
+            background:var(--white); 
+            border-radius:12px; 
+            box-shadow:0 6px 18px rgba(0,0,0,0.06); 
+            overflow:hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project-card:hover{
+            transform: translateY(-5px);
+            box-shadow:0 10px 25px rgba(0,0,0,0.12);
+        }
+        .project-media{ 
+            width:100%; 
+            height:240px; 
+            background:#000; 
+            display:flex; 
+            align-items:center; 
+            justify-content:center;
+            cursor: pointer;
+        }
+        .project-media img{ width:100%; height:100%; object-fit:cover; display:block; }
+        .project-media video{ width:100%; height:100%; object-fit:cover; display:block; cursor:pointer; }
+        .project-content{ padding:16px; }
+        .project-content h3{ margin-bottom: 8px; }
+        .project-content p{ color: var(--muted); line-height: 1.6; }
+        .tech-tags{ display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+        .tag{ 
+    font-size:0.82rem; 
+    padding:6px 10px; 
+    border-radius:18px; 
+    background: #669BBC; 
+    color:#fff; 
+    font-weight:600; 
+}
+        .tag:nth-child(5n+1){ background: #669BBC; }
+        .tag:nth-child(5n+2){ background: #C1121F; }
+        .tag:nth-child(5n+3){ background: #780000; }
+        .tag:nth-child(5n+4){ background: #AE1F23; }
+        .tag:nth-child(5n+5){ background: #003049; }
+
+        .experience-item{ 
+            background: #fff; 
+            padding:18px; 
+            border-radius:10px; 
+            border-left:4px solid #780000;
+            display:flex; 
+            gap:16px; 
+            align-items:flex-start;
+            margin-bottom: 14px;
+        }
+        .exp-media{ 
+            width:320px; 
+            max-width:35%; 
+            min-width:180px; 
+            height:160px; 
+            background:#ddd; 
+            border-radius:8px; 
+            overflow:hidden; 
+        }
+        .exp-media.large-video {
+            width: 420px;
+            max-width: 45%;
+            height: 240px;
+        }
+        .exp-media img{ width:100%; height:100%; object-fit:cover; display:block; }
+        .exp-media video{ width:100%; height:100%; object-fit:cover; display:block; cursor:pointer; }
+        .exp-text{ flex:1; }
+        .exp-text h3{ margin-bottom: 6px; }
+        .experience-meta{ color: var(--muted); font-size: 0.9rem; margin-bottom: 8px; }
+
+        /* Gallery indicator icon */
+        .gallery-indicator {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            pointer-events: none;
+            z-index: 5;
+        }
+        .gallery-indicator::before {
+            content: '🖼️';
+            font-size: 1.1rem;
+        }
+        .project-media, .exp-media {
+            position: relative;
+        }
+
+       
+        .skills-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:12px; margin-top:12px; }
+        .skill-card{ background:var(--white); padding:16px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border-top:4px solid #003049; }
+        .skills-grid .skill-card:nth-child(5n+1), .achievements-grid .skill-card:nth-child(5n+1){ border-top-color:#003049; }
+        .skills-grid .skill-card:nth-child(5n+2), .achievements-grid .skill-card:nth-child(5n+2){ border-top-color:#C1121F; }
+        .skills-grid .skill-card:nth-child(5n+3), .achievements-grid .skill-card:nth-child(5n+3){ border-top-color:#669BBC; }
+        .skills-grid .skill-card:nth-child(5n+4), .achievements-grid .skill-card:nth-child(5n+4){ border-top-color:#780000; }
+        .skills-grid .skill-card:nth-child(5n+5), .achievements-grid .skill-card:nth-child(5n+5){ border-top-color:#AE1F23; }
+        .skill-card h4{ margin-bottom: 10px; }
+        .skill-list{ list-style:none; color:var(--muted); margin-top:8px; }
+        .skill-list li{ padding: 4px 0; }
+
+       
+        .cert-link{ 
+    display:inline-block; 
+    padding:12px 20px; 
+    background:#669BBC; 
+    color: var(--white);
+    border-radius:8px; 
+    text-decoration:none; 
+    font-weight:600;
+    transition: background 0.3s, color 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.cert-link:hover{ background: #fff; color: #003049; }
+
+       
+        .achievements-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:12px; }
+
+       
+        .contact-section{ background:var(--dark); color:#fff; padding:32px; text-align:center; border-radius:10px; }
+        .contact-links{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:16px; }
+      .contact-btn{ 
+    padding:10px 16px; 
+    border-radius:8px; 
+    text-decoration:none; 
+    font-weight:600; 
+    color:#003049; 
+    background: white;
+    transition: transform 0.2s, background 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.contact-btn:hover{ transform: translateY(-2px); background: #EAF3F8; }
+.contact-btn.secondary{ background:transparent; border:2px solid #fff; color:#003049; }
+.contact-btn.secondary:hover{ background:#EAF3F8; color:var(--white); }
+        /* Edits Section Styles */
+        .instagram-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            color:#c08497;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 16px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .instagram-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        /* On Process Section */
+        .process-badge {
+            display: inline-block;
+            background: #FFFF00;
+            color: #111;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-left: 8px;
+        }
+        .process-item {
+            background: #fff;
+            border-left: 4px solid #ffc107;
+        }
+
+        /* Presentation Download Box */
+        .presentation-box {
+   background: #003049;
+            padding: 28px;
+            border-radius: 12px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .presentation-icon {
+            font-size: 4rem;
+            opacity: 0.9;
+        }
+        .presentation-text {
+            flex: 1;
+            min-width: 250px;
+        }
+        .presentation-text h3 {
+            color: white;
+            margin-bottom: 8px;
+        }
+        .presentation-text p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 16px;
+        }
+        .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: white;
+    color: #003049;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.2s, background 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.download-btn:hover {
+    transform: translateY(-2px);
+    background: #EAF3F8;
+}
+        /* Last Updated */
+        .last-updated {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+            padding: 16px;
+            background: var(--light);
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        
+        
+        .lightbox{ 
+            display:none; 
+            position:fixed; 
+            inset:0; 
+            background:rgba(0,0,0,0.9); 
+            align-items:center; 
+            justify-content:center; 
+            z-index:9999; 
+            padding:20px; 
+        }
+        .lightbox.active{ display:flex; }
+        .lightbox-content{ max-width:100%; max-height:100%; position: relative; }
+        .lightbox-content img, .lightbox-content video{ 
+            max-width:100%; 
+            max-height:90vh; 
+            object-fit:contain; 
+            display:block; 
+        }
+        .lightbox-close{
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: rgba(0,0,0,0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gallery-btn{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.6);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .gallery-btn:hover{ background: rgba(0,0,0,0.8); }
+        .gallery-btn.prev{ left: 20px; }
+        .gallery-btn.next{ right: 20px; }
+
+        footer{ padding:30px 0; text-align:center; color:var(--muted); font-size:0.95rem; border-top: 1px solid #eee; margin-top: 40px; }
+
+       @media (max-width:900px){
+            header{ min-height:auto; padding:32px 16px; }
+            .header-content{ flex-direction: column; text-align: center; gap: 20px; }
+            .header-text{ text-align: center; }
+            .profile-img{ width: 140px; height: 140px; }
+            h1{ font-size: 1.7rem; }
+            .subtitle{ font-size: 1rem; }
+            .tagline{ font-size: 0.95rem; }
+            .experience-item{ flex-direction: column; }
+            .exp-media{ display:block; width:100%; max-width:100%; height:200px; }
+            .exp-media.large-video{ width:100%; max-width:100%; height:280px; }
+            h1{ font-size: 1.6rem; }
+            .projects-grid{ grid-template-columns: 1fr; }
+            .presentation-box{ flex-direction: column; text-align: center; }
+        }
+        .project-media video {
+    pointer-events: none;
+}
+        #about .section-intro {
+    color: #111;
+}
+
+
+    </style>
+</head>
+<body>
+
+   <header>
+        <div class="header-content">
+            <img class="profile-img" src="Screenshot 2026-03-04 233032.png" alt="Aibike Moldobaeva">
+            <div class="header-text">
+                <h1>Aibike Moldobaeva</h1>
+                <div class="subtitle">Electrical & Electronics Engineering Student - Kyrgyz-Turkish Manas University</div>
+                <div class="tagline">IoT · Embedded Systems · Fabrication Lab Instructor · STEM Volunteer · Content Creator</div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#on-process">On Process</a></li>
+            <li><a href="#presentation">Presentation</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#edits">Edits</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        
+    
+     <section id="about">
+  <h2>About Me</h2>
+
+  <p class="section-intro">
+    I'm a third-year Electrical and Electronics Engineering student at Kyrgyz-Turkish Manas University in Bishkek.
+    I'm passionate about robotics, embedded systems, and the creative side of engineering - turning ideas into real, working prototypes.
+  </p>
+
+  <p class="section-intro">
+    What drives me most is curiosity and the excitement of building something new.
+    I love those moments of trial and error - when a circuit finally works after hours of testing, or when a small concept evolves into a functioning design.
+  </p>
+
+  <p class="section-intro">
+    I plan to continue my academic journey through a Master's and later a PhD, focusing on research and innovation.
+    My goal is to contribute to developing technologies that make a real impact and eventually share that experience through teaching.
+  </p>
+
+  <p class="section-intro">
+    For now, I'm focused on learning, experimenting, and growing with every project I take on.
+  </p>
+         
+ <!-- Self Introduction Video Box -->
+<section id="self-intro-video">
+    <h2>Self Introduction </h2>
+   <div class="presentation-box" style="background:#669BBC; max-width:650px; margin:0 auto;">
+        <div class="presentation-text">
+            <h3>Watch My Personal Introduction</h3>
+            <p>Learn more about my journey, projects, and aspirations through this short video.</p>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); margin: 12px auto 0 auto; max-width: 550px;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                    src="https://www.youtube.com/embed/CVLQwrgJHT8?rel=0&modestbranding=1" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+         
+            <p class="section-intro">Moments from various activities, competitions, and university life.</p>
+            <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr));">
+                <div class="project-card">
+                    <div class="project-media" >
+                        <img src="gallery2.jpg" alt="University Activity">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-media">
+                        <img src="gallery1.jpg" alt="Competition">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-media">
+                        <img src="proastro3.jpg" alt="Event">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-media" >
+                        <img src="Screenshot 2025-10-20 012321.png" alt="Activity">
+                    </div>
+                </div>
+            </div>
+       
+</section>
+        
+<section id="experience">
+    <h2>Experience</h2>
+    <p class="section-intro">Click images/videos to view in full screen :)</p>
+
+    <div class="experience-item">
+        <div class="exp-media large-video" onclick="openLightboxVideo('фаблабвидео.mp4')">
+            <video 
+                autoplay
+                loop
+                muted 
+                playsinline 
+                preload="auto">
+                <source src="фаблабвидео.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="exp-text">
+            <h3>Fabrication Lab Instructor - FabLab</h3>
+            <div class="experience-meta">2024 - Present</div>
+            <p>Train students in Arduino, robotics, and prototyping tools including 3D printing and laser cutting. 
+            Guide IoT and embedded systems projects, mentor hackathon teams, and conduct workshops on digital fabrication techniques.</p>
+        </div>
+    </div>
+
+   <div class="experience-item">
+        <div class="exp-media" onclick="openLightboxGallery('university')">
+            <img src="uni1.jpg" alt="Kyrgyz-Turkish Manas University" loading="lazy">
+            <div class="gallery-indicator">Gallery</div>
+        </div>
+        <div class="exp-text">
+            <h3>Kyrgyz-Turkish Manas University</h3>
+            <div class="experience-meta">B.Sc. Electrical & Electronics Engineering - 2022 - Present</div>
+            <p>Third-year student with focus on electronics, signals and systems, circuit analysis, and embedded systems. 
+            Active participant in student clubs, competitions.</p>
+            <ul style="color:var(--muted); margin-top:8px; padding-left: 20px;">
+                <li>GPA: 3.77 (Top 10%)</li>
+                <li>Scholarship: Excellent Student Scholarship</li>
+            </ul>
+              <a class="cert-link" href="transcript.pdf" target="_blank" style="margin-top: 20px; display: inline-block;">
+                     Download Transcript  (PDF)
+                </a>
+        </div>
+    </div>
+
+   <div class="experience-item">
+        <div class="exp-media" onclick="openLightboxGallery('huawei')">
+            <img src="sftf3.jpg" alt="Huawei Seeds for the Future" loading="lazy">
+            <div class="gallery-indicator">Gallery</div>
+        </div>
+        <div class="exp-text">
+            <h3>Huawei - Seeds for the Future</h3>
+            <div class="experience-meta">Huawei | 2025</div>
+            <p>Selected for Huawei's prestigious global technology and leadership program. Gained hands-on experience with 
+            5G networks, cloud computing, and AI technologies. Collaborated with international peers on technical challenges 
+            and participated in cultural exchange activities.</p>
+        </div>
+    </div>
+
+    <div class="experience-item">
+         <div class="exp-media" >
+            <img src="orhun.jpg" alt="orhun" loading="lazy">
+        </div>
+        <div class="exp-text">
+            <h3>Exchange Program - İzmir, Turkey</h3>
+            <div class="experience-meta">Fall 2025</div>
+            <p>Completing advanced coursework in electronics, communication systems at a Turkish university. 
+            Engaged in multicultural academic collaboration and expanded technical knowledge through international exposure.</p>
+        </div>
+    </div>
+
+    <div class="experience-item">
+         <div class="exp-media" >
+              <img src="proastro2.jpg" alt="proastro" loading="lazy">
+        </div>
+        <div class="exp-text">
+            <h3>Volunteer - ProAstro STEM Technopark</h3>
+            <div class="experience-meta">Kyrgyzstan's First STEM Science & Technology Park | 2024 - 2025</div>
+            <p>Volunteered at ProAstro, assisting in prototyping and preparing exhibition projects. Helped organize educational 
+            activities and workshops for visitors, contributing to promoting STEM education and innovation culture in Kyrgyzstan.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Featured Projects</h2>
+    <p class="section-intro">Click images/videos to view in full screen :)</p>
+
+    <div class="projects-grid">
+        <article class="project-card">
+            <div class="project-media" onclick="openLightboxVideo('huaweisftfvideo.mp4')">
+                <video 
+                    autoplay
+                    loop
+                    muted 
+                    playsinline 
+                    preload="auto">
+                    <source src="huaweisftfvideo.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="project-content">
+                <h3>Huawei - Seeds for the Future</h3>
+                <p>Global training program on telecommunications, 5G, cloud computing, and AI technologies. Participated in 2025, 
+                developing leadership and innovation skills through international collaboration.</p>
+                <div class="tech-tags">
+                    <span class="tag">5G</span>
+                    <span class="tag">Cloud Computing</span>
+                    <span class="tag">AI</span>
+                    <span class="tag">Leadership</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-media" onclick="openLightboxVideo('IMG_6133_compressed.mp4')">
+                <video 
+                    autoplay
+                    loop
+                    muted 
+                    playsinline 
+                    preload="auto">
+                    <source src="IMG_6133_compressed.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="project-content">
+                <h3>2D Manufacturing Workflow</h3>
+                <p>Demonstration of laser cutting, CAD-to-fabrication workflow, and rapid prototyping techniques from FabLab 
+                instruction sessions. Showcases the complete process from design to finished product.</p>
+                <div class="tech-tags">
+                    <span class="tag">Laser Cutting</span>
+                    <span class="tag">CAD</span>
+                    <span class="tag">Prototyping</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-media" onclick="openLightboxVideo('IMG_4666.mp4')">
+                <video 
+                    autoplay
+                    loop
+                    muted 
+                    playsinline 
+                    preload="auto">
+                    <source src="IMG_4666.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="project-content">
+                <h3>NASA Space Apps - Hackathon Project</h3>
+                <p>Participated in NASA's International Space Apps Challenge, developing online video game and animation video for 25 years of TERRA satellite.</p>
+                <div class="tech-tags">
+                    <span class="tag">NASA</span>
+                    <span class="tag">Data Viz</span>
+                    <span class="tag">Sustainability</span>
+                </div>
+                <a href="https://www.spaceappschallenge.org/2025/find-a-team/terrazoomer/?tab=project" target="_blank" style="color:var(--primary); font-weight:600; text-decoration:none; display:block; margin-top:8px;">View Full Project →</a>
+            </div>
+        </article>
+
+                <article class="project-card">
+                    <div class="project-media" onclick="openLightboxGallery('maglev')">
+                        <img src="maglev2.jpg" alt="Maglev Train Prototype">
+                        <div class="gallery-indicator">Gallery</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Maglev Train Prototype - 1st Place</h3>
+                        <p>Led team to design and build a magnetic levitation train model for a mobile children's science park. 
+                        Applied principles of electromagnetism to create an educational exhibit. <strong>Won 1st place</strong> at national Makeathon.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Team Lead</span>
+                            <span class="tag">Electromagnetism</span>
+                            <span class="tag">Prototyping</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media" onclick="openLightboxGallery('fantomat')">
+                        <img src="photo_2025-10-18_00-02-17.jpg" alt="FANTOMAT Reverse Vending Machine">
+                        <div class="gallery-indicator">Gallery</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>FANTOMAT - Reverse Vending System</h3>
+                        <p>Contributed to developing an innovative recycling system that collects bottles and cans in exchange for 
+                        reward points via mobile app.</p>
+                        <div class="tech-tags">
+                            <span class="tag">IoT</span>
+                            <span class="tag">Mobile App</span>
+                            <span class="tag">Sustainability</span>
+                        </div>
+                    </div>
+                </article>
+        
+                <article class="project-card">
+                            <div class="project-media" onclick="openLightboxGallery('debate')">
+                                <img src="debate.jpg" alt="Manas University Debate Club">
+                                <div class="gallery-indicator">Gallery</div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Manas University Debate Club</h3>
+                                <p>Mentored new members, organized national tournaments, and trained students in communication and argumentation. </p>
+                                <div class="tech-tags">
+                                    <span class="tag">SMM</span>
+                                    <span class="tag">Leadership</span>
+                                    <span class="tag">Mentoring</span>
+                                </div>
+                            </div>
+                        </article>
+            </div>
+        </section>
+
+        <!-- On Process Section -->
+        <section id="on-process">
+            <h2>On Process <span class="process-badge"> ACTIVE</span></h2>
+            <p class="section-intro">Current project I'm working on - Click image to view full screen</p>
+
+            <div class="experience-item process-item">
+                <div class="exp-media" onclick="openLightboxImage('Screenshot 2026-02-14 131340.png')">
+                    <img src="Screenshot 2026-02-14 131340.png" alt="Autonomous Line-Following Robot" loading="lazy">
+                </div>
+                <div class="exp-text">
+                    <h3>Autonomous Line-Following Robot</h3>
+                    <div class="experience-meta">Started: February 2026 · In Progress</div>
+                    <p>
+                        Currently designing and building an advanced line-following robot for an upcoming university robotics competition. 
+                        The robot uses infrared sensors for precise line detection and incorporates obstacle avoidance capabilities using ultrasonic sensors.
+                    </p>
+                    <p style="margin-top: 12px; color: var(--muted);">
+                        <strong>Key Features:</strong><br>
+                        • PID algorithm for smooth path tracking and speed optimization<br>
+                        • Real-time decision-making system for complex track scenarios<br>
+                        • Custom PCB design for better circuit integration and reliability<br>
+                        • 3D-printed chassis optimized for weight distribution and stability
+                    </p>
+                    <div class="tech-tags" style="margin-top: 12px;">
+                        <span class="tag">Arduino</span>
+                        <span class="tag">Robotics</span>
+                        <span class="tag">PID Control</span>
+                        <span class="tag">Sensors</span>
+                        <span class="tag">3D Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Robotic Manipulator Photo Gallery -->
+        <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); margin-top: 24px; margin-bottom: 56px;">
+            <div class="project-card">
+                <div class="project-media" style="cursor: default;">
+                    <img src="Screenshot 2026-04-17 163346.png" alt="Cycloidal Drive">
+                </div>
+                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
+                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Robotic Manipulator</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-media" style="cursor: default;">
+                    <img src="Screenshot 2026-04-05 093515.png" alt="Robotic Manipulator">
+                </div>
+                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
+                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Cycloidal Drive</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-media" style="cursor: default;">
+                    <img src="Screenshot 2026-04-17 161032.png" alt="Electronics">
+                </div>
+                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
+                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Cycloidal Drive</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-media" style="cursor: default;">
+                    <img src="Screenshot 2026-04-24 155041.png" alt="Assembly">
+                </div>
+                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
+                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Assembly</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Presentation Section -->
+        <section id="presentation">
+            <h2>About Me Presentation</h2>
+            
+            <div class="presentation-box">
+                <div class="presentation-text">
+                    <h3>Download My Full Presentation</h3>
+                    <p>A comprehensive overview of my journey, projects, skills, and achievements in a professional PowerPoint format.</p>
+                    <a href="https://1drv.ms/p/c/7843f33f9986358e/IQAZ6k9i1XNpTL9RW0iWI3eGAb5GLcIWkrYY5sUpHcd9A0I?e=6ZAErg" target="_blank" class="download-btn">
+                        Download Presentation (PPTX)
+                    </a>
+                </div>
+            </div>
+        </section>
+ 
+        <section id="skills">
+            <h2>Skills & Tools</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Programming & Software</h4>
+                    <ul class="skill-list">
+                        <li>C / C++ (Arduino, Embedded)</li>
+                        <li>Python</li>
+                        <li>MATLAB & Simulink</li>
+                        <li>Proteus (Circuit Simulation)</li>
+                        <li>TinkerCAD</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Hardware & Embedded</h4>
+                    <ul class="skill-list">
+                        <li>Arduino & ESP8266/ESP32 etc</li>
+                        <li>Sensor Systems & Integration</li>
+                        <li>Circuit Design & Analysis</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Design & Fabrication</h4>
+                    <ul class="skill-list">
+                        <li>SolidWorks </li>
+                        <li>AutoCAD </li>
+                        <li>3D Printing </li>
+                        <li>Laser Cutting</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Media & Visualization</h4>
+                    <ul class="skill-list">
+                        <li>Adobe After Effects</li>
+                        <li>Microsoft Office Suite</li>
+                        <li>Presentation & Documentation</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Languages</h4>
+                    <ul class="skill-list">
+                        <li>English (Fluent)</li>
+                        <li>Russian (Fluent)</li>
+                        <li>Turkish (B2)</li>
+                        <li>Kyrgyz (Native)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificates">
+            <div style="background: #003049; padding: 24px; border-radius: 10px; border-left: 4px solid #669BBC; margin-bottom: 24px;">
+                <h4 style="margin-bottom: 16px; font-size: 1.2rem;">Certificates:</h4>
+                <ul style="color: #fff; line-height: 2; padding-left: 20px;">
+                    <li><strong>Arduino Development</strong> - KOICA SIFO Program</li>
+                    <li><strong>Internet of Things (IoT)</strong> - KOICA SIFO Program</li>
+                    <li><strong>2D, 3D Design & Fabrication</strong> - KOICA SIFO Program</li>
+                    <li><strong>Huawei Seeds for the Future</strong> - 2025</li>
+                </ul>
+                <a class="cert-link" href="certificates_Aibike.pdf" target="_blank" style="margin-top: 20px; display: inline-block;">
+                     Download All Certificates (PDF)
+                </a>
+            </div>
+        </section>
+        
+        <section id="achievements">
+            <h2>Achievements </h2>
+            <div class="achievements-grid">
+                <div class="skill-card">
+                    <h4>Academic Excellence</h4>
+                    <p style="color:var(--muted);">
+                        Maintaining 3.77 GPA, ranking in Top 10% of class. 
+                        Recipient of Excellent Student Scholarship.
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <h4>Math Olympiad Finalist</h4>
+                    <p style="color:var(--muted);">
+                        1st place in Kemin region and 2nd place in Chui province at 
+                        National School Mathematics Olympiad. Advanced to national finals.
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <h4>STEM Education Volunteer</h4>
+                    <p style="color:var(--muted);">
+                        Taught mathematics and science to school children who fell behind during the pandemic. 
+                        Developed engaging lesson plans and provided one-on-one tutoring.
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <h4>ProAstro Technopark Volunteer</h4>
+                    <p style="color:var(--muted);">
+                        Volunteered at Kyrgyzstan's first STEM science and technology park, assisting in prototyping 
+                        exhibition projects and organizing educational activities.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-section">
+                <p style="font-size: 1.1rem; margin-bottom: 16px; color: #fff;">
+                    +996 708 072 286
+                </p>
+
+                <div class="contact-links">
+                    <a class="contact-btn" href="mailto:aibikemoldobaeva@gmail.com" style="color:#111;">
+                        📧 aibikemoldobaeva@gmail.com
+                    </a>
+
+                    <a class="contact-btn secondary" href="https://wa.me/996708072286" target="_blank" style="color:#fff;">
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Edits Section - MOVED TO END -->
+        <section id="edits">
+            <h2>Video Edits</h2>
+            <p class="section-intro">
+                My creative video editing projects crafted in <strong style="color: var(--primary);">Adobe After Effects</strong> 
+                - Click any video to watch in full screen
+            </p>
+            
+            <div class="projects-grid">
+                <!-- Edit 1 -->
+                <article class="project-card">
+                    <div class="project-media" onclick="openLightboxVideo('unknown-KREAYSHAWN - MISSING KITTY_3 (1).mp4')">
+                        <video 
+                            autoplay
+                            loop
+                            muted 
+                            playsinline 
+                            preload="auto">
+                            <source src="unknown-KREAYSHAWN - MISSING KITTY_3 (1).mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </article>
+
+                <!-- Edit 2 -->
+                <article class="project-card">
+                    <div class="project-media" onclick="openLightboxVideo('takemichi.mp4')">
+                        <video 
+                            autoplay
+                            loop
+                            muted 
+                            playsinline 
+                            preload="auto">
+                            <source src="takemichi.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </article>
+
+                <!-- Edit 3 -->
+                <article class="project-card">
+                    <div class="project-media" onclick="openLightboxVideo('1437813576_334258762841_2.mp4')">
+                        <video 
+                            autoplay
+                            loop
+                            muted 
+                            playsinline 
+                            preload="auto">
+                            <source src="1437813576_334258762841_2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </article>
+
+                <!-- Edit 4 - NASA -->
+                <article class="project-card">
+                    <div class="project-media" onclick="openLightboxVideo('Aibike_spaceappchallenge_2 (2).mp4')">
+                        <video 
+                            autoplay
+                            loop
+                            muted 
+                            playsinline 
+                            preload="auto">
+                            <source src="Aibike_spaceappchallenge_2 (2).mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-content">
+                        <h3>🚀 NASA Space Apps Challenge</h3>
+                        <p>Animation video for NASA Space Apps Challenge celebrating 25 years of TERRA satellite.</p>
+                        <div class="tech-tags">
+                            <span class="tag">After Effects</span>
+                            <span class="tag">Motion Graphics</span>
+                            <span class="tag">NASA</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Instagram Card -->
+               <article class="project-card" style="background: #AE1F23;">
+                    <div class="project-content" style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 32px 20px;">
+                        <h3 style="color: white; margin-bottom: 16px; font-size: 1.25rem;">✨ See More</h3>
+                        <p style="color: rgba(255,255,255,0.95); margin-bottom: 20px; font-size: 0.95rem;">
+                            Follow for more edits & transitions
+                        </p>
+                       <a href="..." class="https://www.instagram.com/bikaboo_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="margin-top: 0; color: #003049;">
+                            <span style="font-size: 1.5rem;"></span>
+                            @bikaboo_
+                        </a>
+                        <p style="color: rgba(255,255,255,0.85); margin-top: 16px; font-size: 0.85rem;">
+                            Motion graphics · Adobe AE
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Last Updated -->
+        <div class="last-updated">
+             Last updated: <span id="last-update-date">February 14, 2026</span>
+        </div>
+    </main>
+    
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content" id="lightbox-content" onclick="event.stopPropagation()">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Aibike Moldobaeva </p>
+        <p style="margin-top: 8px; font-size: 0.85rem;">Electrical & Electronics Engineering | Kyrgyz-Turkish Manas University</p>
+    </footer>
+
+    <script>
+    const galleries = {
+        maglev: ['maglev2.jpg', 'maglev1.jpg', 'maglev3.jpg', 'maglev.jpg', 'maglev4.jpg', 'maglev5.jpg', 'maglev6.jpg'],
+        fantomat: ['fantomat1.jpg', 'fantomat2.jpg'],
+        university: ['uni1.jpg', 'uni2.jpg', 'uni3.jpg'],
+        huawei: ['sftf3.jpg', 'sftf2.jpg', 'sftf8.jpg', 'sftf9.jpg', 'sftf5.jpg', 'sftf1.jpg', 'sftf7.jpg', 'sftf4.jpg', 'sftf6.jpg'],
+        debate: ['debate.jpg', 'debate4.jpg', 'debate2.jpg', 'debate1.jpg', 'debate5.jpg']
+    };
+    
+    const lightbox = document.getElementById('lightbox');
+    const lightboxContent = document.getElementById('lightbox-content');
+    
+    function openLightboxImage(src){
+        lightboxContent.innerHTML = `
+            <div class="lightbox-close" onclick="closeLightbox()">×</div>
+            <img src="${src}" alt="Full size image" />
+        `;
+        lightbox.classList.add('active');
+    }
+    
+    function openLightboxVideo(src){
+        lightboxContent.innerHTML = `
+            <div class="lightbox-close" onclick="closeLightbox()">×</div>
+            <video controls autoplay style="max-width:100%; max-height:90vh;">
+                <source src="${src}" type="video/mp4">
+            </video>
+        `;
+        lightbox.classList.add('active');
+        const video = lightboxContent.querySelector('video');
+        if(video) {
+            video.muted = false;
+            video.play().catch(e => console.log('Autoplay prevented:', e));
+        }
+    }
+    
+    function openLightboxGallery(galleryId){
+        const photos = galleries[galleryId];
+        if(!photos || photos.length === 0) {
+            console.error('Gallery not found:', galleryId);
+            return;
+        }
+        
+        let currentIndex = 0;
+
+        function renderGallery(){
+            lightboxContent.innerHTML = `
+                <div class="lightbox-close" onclick="closeLightbox()">×</div>
+                <button class="gallery-btn prev" onclick="event.stopPropagation()">‹</button>
+                <img src="${photos[currentIndex]}" alt="Gallery image ${currentIndex + 1}" style="max-width:90%; max-height:85vh; display:block; margin: 0 auto;" />
+                <button class="gallery-btn next" onclick="event.stopPropagation()">›</button>
+                <div style="position:absolute; bottom:20px; left:50%; transform:translateX(-50%); color:white; background:rgba(0,0,0,0.6); padding:8px 16px; border-radius:20px; font-size:0.9rem;">
+                    ${currentIndex + 1} / ${photos.length}
+                </div>
+            `;
+            const prevBtn = lightboxContent.querySelector('.gallery-btn.prev');
+            const nextBtn = lightboxContent.querySelector('.gallery-btn.next');
+            
+            prevBtn.onclick = (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+                renderGallery();
+            };
+            
+            nextBtn.onclick = (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex + 1) % photos.length;
+                renderGallery();
+            };
+        }
+
+        renderGallery();
+        lightbox.classList.add('active');
+    }
+    
+    function closeLightbox(){
+        lightbox.classList.remove('active');
+        lightboxContent.innerHTML = '';
+    }
+    
+    document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+    
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            if(targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    function updateLastModified() {
+        const lastUpdate = document.getElementById('last-update-date');
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        lastUpdate.textContent = today.toLocaleDateString('en-US', options);
+    }
+    updateLastModified();
+    </script>
+</body>
+</html>
