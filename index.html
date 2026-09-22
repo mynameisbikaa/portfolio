@@ -444,6 +444,7 @@ header h1 {
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#on-process">On Process</a></li>
@@ -525,6 +526,91 @@ header h1 {
                 </div>
             </div>
        
+</section>
+
+<section id="research">
+    <h2>Research Internship</h2>
+    <p class="section-intro">METU ROMER (Robotics and Mechatronics Research Center) — Middle East Technical University, Ankara. Summer research internship (Jul–Aug 2026) focused on medical robotics and magnetic actuation.</p>
+
+    <div class="experience-item">
+        <div class="exp-media large-video" onclick="openLightboxVideo('romer_vid.mp4')">
+            <video autoplay loop muted playsinline preload="auto">
+                <source src="romer_vid.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="exp-text">
+            <h3>Research Intern — METU ROMER</h3>
+            <div class="experience-meta">Middle East Technical University, Ankara · Summer 2026</div>
+            <p>METU ROMER is Middle East Technical University's Center for Robotics and Mechatronics Research, developing robotic systems for medical, industrial, and field applications. Worked within its medical robotics group on magnetically-actuated microrobot control.</p>
+        </div>
+    </div>
+
+    <article class="project-card" style="margin-top: 14px;">
+        <div class="project-content">
+            <h3>Development of a Robot-Assisted Permanent Magnetic Actuation System</h3>
+            <p>This project focuses on the miniaturization and integration of a robot-assisted permanent-magnet actuation system based on our differential swerve-drive spherical-magnet steering mechanism for magnetic microrobot control. The system will be downscaled and mounted on a UR5 robot arm to enable precise spatial positioning and orientation of a high-strength neodymium magnet (50 mm diameter, 60 mm height). The mechanical design will provide continuous 3D orientation control of the magnet, and the embedded hall-effect sensors within the actuator will provide real-time feedback of the magnetic field, enabling estimation of the magnet's orientation and supporting closed-loop control.</p>
+            <p style="margin-top: 12px;">The control system will combine the UR5's positioning capability with internal actuation of the swerve mechanism to achieve independent control of magnet position and field direction. Magnetic field models (e.g., the dipole approximation) will be used to predict the field distribution and guide control design, while calibration and sensor-fusion methods will compensate for nonlinearities and disturbances. The system will be experimentally validated through magnetic manipulation tasks to evaluate precision, responsiveness, and workspace characteristics, ultimately establishing a compact and controllable platform for magnetic actuation in medical robotic applications.</p>
+            <div class="tech-tags" style="margin-top: 12px;">
+                <span class="tag">UR5 Robot Arm</span>
+                <span class="tag">Hall-Effect Sensors</span>
+                <span class="tag">Closed-Loop Control</span>
+                <span class="tag">Magnetic Actuation</span>
+                <span class="tag">Medical Robotics</span>
+            </div>
+            <a class="cert-link" href="#" target="_blank" style="margin-top: 20px; display: inline-block;">
+                View Project Repository
+            </a>
+        </div>
+    </article>
+
+    <div class="projects-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 18px;">
+        <div class="project-card">
+            <div class="project-media" onclick="openLightboxVideo('romer_vid.mp4')">
+                <video autoplay loop muted playsinline preload="auto">
+                    <source src="romer_vid.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
+                <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Project Video</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-media" onclick="openLightboxGallery('romer3d')">
+                <img src="romer_3d_1.jpg" alt="ROMER 3D Model">
+                <div class="gallery-indicator">Gallery</div>
+            </div>
+            <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
+                <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">3D Models</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-media" onclick="openLightboxGallery('romerrl')">
+                <img src="romer_rl_1.jpg" alt="ROMER Real Life Photos">
+                <div class="gallery-indicator">Gallery</div>
+            </div>
+            <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
+                <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Real-Life Build</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="experience-item" style="margin-top: 32px;">
+        <div class="exp-media">
+            <img src="biodesign_lab.jpg" alt="BioDesign Lab, Asia University" loading="lazy">
+        </div>
+        <div class="exp-text">
+            <h3>Research Intern — BioDesign Lab, Asia University (Taiwan)</h3>
+            <div class="experience-meta">International Internship Pilot Program (IIPP) · Oct – Dec 2026</div>
+            <p>Selected for the International Internship Pilot Program (IIPP), an initiative of Taiwan's National Science and Technology Council (NSTC) that places international research talent with NSTC-funded Principal Investigators at Taiwanese universities and research institutes, giving interns hands-on exposure to Taiwan's research environment.</p>
+            <p style="margin-top: 12px;">Hosted by the BioDesign Lab at Asia University, Taichung, under Professor Chi-Wen Lung (Department of Creative Product Design / Bioinformatics and Medical Engineering). Founded in 2010, the lab works across industrial design, biomedical engineering, and rehabilitation science — combining AI, robotics, and soft-tissue mechanics research to develop technologies that improve human health.</p>
+            <div class="tech-tags" style="margin-top: 12px;">
+                <span class="tag">Biomedical Engineering</span>
+                <span class="tag">Rehabilitation Engineering</span>
+                <span class="tag">AI</span>
+                <span class="tag">Product Design</span>
+            </div>
+        </div>
+    </div>
 </section>
         
 <section id="experience">
@@ -1055,7 +1141,9 @@ header h1 {
         fantomat: ['fantomat1.jpg', 'fantomat2.jpg'],
         university: ['uni1.jpg', 'uni2.jpg', 'uni3.jpg'],
         huawei: ['sftf3.jpg', 'sftf2.jpg', 'sftf8.jpg', 'sftf9.jpg', 'sftf5.jpg', 'sftf1.jpg', 'sftf7.jpg', 'sftf4.jpg', 'sftf6.jpg'],
-        debate: ['debate.jpg', 'debate4.jpg', 'debate2.jpg', 'debate1.jpg', 'debate5.jpg']
+        debate: ['debate.jpg', 'debate4.jpg', 'debate2.jpg', 'debate1.jpg', 'debate5.jpg'],
+        romer3d: ['romer_3d_1.jpg', 'romer_3d_2.jpg', 'romer_3d_3.jpg', 'romer_3d_4.jpg', 'romer_3d_5.jpg', 'romer_3d_6.jpg', 'romer_3d_7.jpg', 'romer_3d_8.jpg'],
+        romerrl: ['romer_rl_1.jpg', 'romer_rl_2.jpg', 'romer_rl_3.jpg', 'romer_rl_4.jpg', 'romer_rl_5.jpg', 'romer_rl_6.jpg', 'romer_rl_7.jpg', 'romer_rl_8.jpg']
     };
     
     const lightbox = document.getElementById('lightbox');
