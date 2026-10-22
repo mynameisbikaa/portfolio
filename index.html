@@ -436,7 +436,7 @@ header h1 {
             <div class="header-text">
                 <h1>Aibike Moldobaeva</h1>
                 <div class="subtitle">Electrical & Electronics Engineering Student - Kyrgyz-Turkish Manas University</div>
-                <div class="tagline">IoT · Embedded Systems · Microelectronics · Fabrication Lab Instructor · STEM Volunteer · Content Creator</div>
+                <div class="tagline">IoT · Embedded Systems · Fabrication Lab Instructor · STEM Volunteer · Content Creator</div>
             </div>
         </div>
     </header>
@@ -465,7 +465,7 @@ header h1 {
 
   <p class="section-intro">
     I'm a third-year Electrical and Electronics Engineering student at Kyrgyz-Turkish Manas University in Bishkek.
-    I'm passionate about robotics, embedded systems,  and the creative side of engineering.
+    I'm passionate about robotics, embedded systems, and the creative side of engineering - turning ideas into real, working prototypes.
   </p>
 
   <p class="section-intro">
@@ -474,7 +474,7 @@ header h1 {
   </p>
 
   <p class="section-intro">
-    I plan to continue my academic journey through a Master's and later a PhD, focusing on research.
+    I plan to continue my academic journey through a Master's and later a PhD, focusing on research and innovation.
     My goal is to contribute to developing technologies that make a real impact and eventually share that experience through teaching.
   </p>
 
@@ -533,23 +533,24 @@ header h1 {
     <p class="section-intro">METU ROMER (Robotics and Mechatronics Research Center) — Middle East Technical University, Ankara. Summer research internship (Jul–Aug 2026) focused on medical robotics and magnetic actuation.</p>
 
     <div class="experience-item">
-    <div class="exp-media large-video" onclick="openLightboxVideo('romer_vid.mp4')">
-        <img src="romer.jpg" alt="METU ROMER Research Internship">
-        <div class="play-button">▶</div>
+        <div class="exp-media large-video" onclick="openLightboxVideo('romer_vid.mp4')">
+            <video autoplay loop muted playsinline preload="auto">
+                <source src="romer_vid.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="exp-text">
+            <h3>Research Intern — METU ROMER</h3>
+            <div class="experience-meta">Middle East Technical University, Ankara · Summer 2026</div>
+            <p>METU ROMER is Middle East Technical University's Center for Robotics and Mechatronics Research, developing robotic systems for medical, industrial, and field applications. Worked within its medical robotics group on magnetically-actuated microrobot control.</p>
+        </div>
     </div>
-
-    <div class="exp-text">
-        <h3>Research Intern — METU ROMER</h3>
-        <div class="experience-meta">Middle East Technical University, Ankara · Summer 2026</div>
-        <p>METU ROMER is Middle East Technical University's Center for Robotics and Mechatronics Research, developing robotic systems for medical, industrial, and field applications. Worked within its medical robotics group on magnetically-actuated microrobot control.</p>
-    </div>
-</div>
 
     <article class="project-card" style="margin-top: 14px;">
         <div class="project-content">
             <h3>Development of a Robot-Assisted Permanent Magnetic Actuation System</h3>
             <p>This project focuses on the miniaturization and integration of a robot-assisted permanent-magnet actuation system based on our differential swerve-drive spherical-magnet steering mechanism for magnetic microrobot control. The system will be downscaled and mounted on a UR5 robot arm to enable precise spatial positioning and orientation of a high-strength neodymium magnet (50 mm diameter, 60 mm height). The mechanical design will provide continuous 3D orientation control of the magnet, and the embedded hall-effect sensors within the actuator will provide real-time feedback of the magnetic field, enabling estimation of the magnet's orientation and supporting closed-loop control.</p>
-            <p style="margin-top: 12px;">The control system will combine the UR5's positioning capability with internal actuation of the swerve mechanism to achieve independent control of magnet position and field direction.</p>
+            <p style="margin-top: 12px;">The control system will combine the UR5's positioning capability with internal actuation of the swerve mechanism to achieve independent control of magnet position and field direction. Magnetic field models (e.g., the dipole approximation) will be used to predict the field distribution and guide control design, while calibration and sensor-fusion methods will compensate for nonlinearities and disturbances. The system will be experimentally validated through magnetic manipulation tasks to evaluate precision, responsiveness, and workspace characteristics, ultimately establishing a compact and controllable platform for magnetic actuation in medical robotic applications.</p>
+            <div class="tech-tags" style="margin-top: 12px;">
                 <span class="tag">UR5 Robot Arm</span>
                 <span class="tag">Hall-Effect Sensors</span>
                 <span class="tag">Closed-Loop Control</span>
@@ -593,20 +594,48 @@ header h1 {
         </div>
     </div>
 
-    <div class="experience-item" style="margin-top: 32px;">
-        <div class="exp-media">
-            <img src="biodesign_lab.jpg" alt="BioDesign Lab, Asia University" loading="lazy">
-        </div>
-        <div class="exp-text">
-            <h3>Research Intern — BioDesign Lab, Asia University (Taiwan)</h3>
-            <div class="experience-meta">International Internship Pilot Program (IIPP) · Oct – Dec 2026</div>
+    <article class="project-card" style="margin-top: 32px;">
+        <div class="project-content">
+            <h3 style="font-size: 2rem; color: #003049; margin-bottom: 4px;">IIPP</h3>
+            <div style="font-size: 1.1rem; font-weight: 700; color: #111;">International Internship Pilot Program</div>
+            <div class="experience-meta" style="margin-top: 4px; margin-bottom: 2px;">Taiwan · Oct – Dec 2026</div>
+            <div style="font-size: 0.8rem; color: #555; margin-bottom: 14px;">BioDesign Lab · Asia University, Taichung</div>
+
             <p>Selected for the International Internship Pilot Program (IIPP), an initiative of Taiwan's National Science and Technology Council (NSTC) that places international research talent with NSTC-funded Principal Investigators at Taiwanese universities and research institutes, giving interns hands-on exposure to Taiwan's research environment.</p>
-            <p style="margin-top: 12px;">Hosted by the BioDesign Lab at Asia University, Taichung, under Professor Chi-Wen Lung (Department of Creative Product Design / Bioinformatics and Medical Engineering). Founded in 2010, the lab works across industrial design, biomedical engineering, and rehabilitation science — combining AI, robotics, and soft-tissue mechanics research to develop technologies that improve human health.</p>
+            
+            <h4 style="margin-top: 22px; margin-bottom: 8px; font-size: 1.15rem;">Robot-Assisted Surgical Instrument Manipulation</h4>
+            <p>This project focuses on developing a robotic manipulation system for surgical instruments using a KUKA industrial robot arm. The work combines ROS 2 integration, marker-based computer vision, and gripper development to support visual detection, localization, and robotic grasping of surgical tools. Current activities include configuring the robotics environment, integrating end effectors, exploring marker-based pose estimation, and collecting data for dataset development and model training. The long-term goal is to connect visual perception with robotic control to enable precise and reliable surgical instrument handling.</p>
             <div class="tech-tags" style="margin-top: 12px;">
-                <span class="tag">Biomedical Engineering</span>
-                <span class="tag">Rehabilitation Engineering</span>
-                <span class="tag">AI</span>
-                <span class="tag">Product Design</span>
+                <span class="tag">KUKA Robotics</span>
+                <span class="tag">ROS 2</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Marker-Based Localization</span>
+                <span class="tag">Robotic Grasping</span>
+                <span class="tag">Medical Robotics</span>
+                <span class="tag">Dataset Development</span>
+            </div>
+        </div>
+    </article>
+
+    <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); margin-top: 18px;">
+        <div class="project-card">
+            <div class="project-media" style="cursor: default;">
+                <img src="iipp1.jpg" alt="IIPP photo 1">
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-media" style="cursor: default;">
+                <img src="iipp2.jpg" alt="IIPP photo 2">
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-media" style="cursor: default;">
+                <img src="iipp3.jpg" alt="IIPP photo 3">
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-media" style="cursor: default;">
+                <img src="iipp4.jpg" alt="IIPP photo 4">
             </div>
         </div>
     </div>
@@ -768,82 +797,7 @@ header h1 {
                 <a href="https://www.spaceappschallenge.org/2025/find-a-team/terrazoomer/?tab=project" target="_blank" style="color:var(--primary); font-weight:600; text-decoration:none; display:block; margin-top:8px;">View Full Project →</a>
             </div>
         </article>
-          </div>
-        </section>
 
-        <!-- On Process Section -->
-        <section id="on-process">
-            <h2>On Process <span class="process-badge"> ACTIVE</span></h2>
-            <p class="section-intro">Current project I'm working on - Click image to view full screen</p>
-
-            <div class="experience-item process-item">
-                <div class="exp-media" onclick="openLightboxImage('Screenshot 2026-02-14 131340.png')">
-                    <img src="Screenshot 2026-02-14 131340.png" alt="Autonomous Line-Following Robot" loading="lazy">
-                </div>
-                <div class="exp-text">
-                    <h3>Autonomous Line-Following Robot</h3>
-                    <div class="experience-meta">Started: February 2026 · In Progress</div>
-                    <p>
-                        Currently designing and building an advanced line-following robot for an upcoming university robotics competition. 
-                        The robot uses infrared sensors for precise line detection and incorporates obstacle avoidance capabilities using ultrasonic sensors.
-                    </p>
-                    <p style="margin-top: 12px; color: var(--muted);">
-                        <strong>Key Features:</strong><br>
-                        • PID algorithm for smooth path tracking and speed optimization<br>
-                        • Real-time decision-making system for complex track scenarios<br>
-                        • Custom PCB design for better circuit integration and reliability<br>
-                        • 3D-printed chassis optimized for weight distribution and stability
-                    </p>
-                    <div class="tech-tags" style="margin-top: 12px;">
-                        <span class="tag">Arduino</span>
-                        <span class="tag">Robotics</span>
-                        <span class="tag">PID Control</span>
-                        <span class="tag">Sensors</span>
-                        <span class="tag">3D Design</span>
-                    </div>
-                </div>
-                  </div>
-        </section>
-         <!-- Robotic Manipulator Photo Gallery -->
-        <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); margin-top: 24px; margin-bottom: 56px;">
-            <div class="project-card">
-                <div class="project-media" style="cursor: default;">
-                    <img src="cycloidaldrive.jpg" alt="Cycloidal Drive">
-                </div>
-                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
-                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Cycloidal Drive</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-media" style="cursor: default;">
-                    <img src="manipulator.jpg" alt="Robotic Manipulator">
-                </div>
-                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
-                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Robotic Manipulator</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-media" style="cursor: default;">
-                    <img src="electronics.jpg" alt="Electronics">
-                </div>
-                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
-                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Electronics</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-media" style="cursor: default;">
-                    <img src="Screenshot 2026-04-24 155041.png" alt="Assembly">
-                </div>
-                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
-                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Assembly</p>
-                </div>
-            </div>
-        </div>
-        
-
-        
-<section id="projects">
-    <div class="projects-grid">
                 <article class="project-card">
                     <div class="project-media" onclick="openLightboxGallery('maglev')">
                         <img src="maglev2.jpg" alt="Maglev Train Prototype">
@@ -896,6 +850,75 @@ header h1 {
             </div>
         </section>
 
+        <!-- On Process Section -->
+        <section id="on-process">
+            <h2>On Process <span class="process-badge"> ACTIVE</span></h2>
+            <p class="section-intro">Current project I'm working on - Click image to view full screen</p>
+
+            <div class="experience-item process-item">
+                <div class="exp-media" onclick="openLightboxImage('Screenshot 2026-02-14 131340.png')">
+                    <img src="Screenshot 2026-02-14 131340.png" alt="Autonomous Line-Following Robot" loading="lazy">
+                </div>
+                <div class="exp-text">
+                    <h3>Autonomous Line-Following Robot</h3>
+                    <div class="experience-meta">Started: February 2026 · In Progress</div>
+                    <p>
+                        Currently designing and building an advanced line-following robot for an upcoming university robotics competition. 
+                        The robot uses infrared sensors for precise line detection and incorporates obstacle avoidance capabilities using ultrasonic sensors.
+                    </p>
+                    <p style="margin-top: 12px; color: var(--muted);">
+                        <strong>Key Features:</strong><br>
+                        • PID algorithm for smooth path tracking and speed optimization<br>
+                        • Real-time decision-making system for complex track scenarios<br>
+                        • Custom PCB design for better circuit integration and reliability<br>
+                        • 3D-printed chassis optimized for weight distribution and stability
+                    </p>
+                    <div class="tech-tags" style="margin-top: 12px;">
+                        <span class="tag">Arduino</span>
+                        <span class="tag">Robotics</span>
+                        <span class="tag">PID Control</span>
+                        <span class="tag">Sensors</span>
+                        <span class="tag">3D Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Robotic Manipulator Photo Gallery -->
+        <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); margin-top: 24px; margin-bottom: 56px;">
+            <div class="project-card">
+                <div class="project-media" style="cursor: default;">
+                    <img src="Screenshot 2026-04-17 163346.png" alt="Cycloidal Drive">
+                </div>
+                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
+                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Robotic Manipulator</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-media" style="cursor: default;">
+                    <img src="Screenshot 2026-04-05 093515.png" alt="Robotic Manipulator">
+                </div>
+                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
+                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Cycloidal Drive</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-media" style="cursor: default;">
+                    <img src="Screenshot 2026-04-17 161032.png" alt="Electronics">
+                </div>
+                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
+                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Cycloidal Drive</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-media" style="cursor: default;">
+                    <img src="Screenshot 2026-04-24 155041.png" alt="Assembly">
+                </div>
+                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
+                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Assembly</p>
+                </div>
+            </div>
+        </div>
 
         <!-- Presentation Section -->
         <section id="presentation">
