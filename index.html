@@ -599,7 +599,7 @@ header h1 {
             
             <h4 style="margin-top: 22px; margin-bottom: 8px; font-size: 1.15rem;">Robot-Assisted Surgical Instrument Manipulation</h4>
             <p>This project focuses on developing a robotic manipulation system for surgical instruments using a KUKA KR6 industrial robot arm. On the software side, I work on a voice-controlled pick-and-place pipeline in ROS 2: offline speech recognition turns spoken commands into robot tasks, a YOLO segmentation model trained on about 2,000 images detects tools such as scissors and pens, and MoveIt plans the robot motion. The wrist camera is calibrated with ArUco markers for accurate marker-based localization, with a mean error of 1.4 mm.</p>
-            <p style="margin-top: 12px;">On the hardware side, I develop the end effector. I selected and integrated an MHZ2-25D pneumatic parallel gripper, controlled from the PC. I designed a gripper housing, a camera adapter and custom fingers in SolidWorks, then 3D-printed and assembled them, so the camera now sits right above the fingers. I also built a servo-driven gripper prototype with current sensing that stops automatically when it grips an object, and routed the gripper air lines through the robot's built-in supply to keep the arm free of external cables. The long-term goal is to connect visual perception with robotic control to enable precise and reliable surgical instrument handling.</p>
+            <p style="margin-top: 12px;">On the hardware side, I develop the end effector. I selected and integrated an MHZ2-25D pneumatic parallel gripper, controlled from the PC through an Arduino, a relay and a 24 V 5/2 solenoid valve. I designed a gripper housing, a camera adapter and custom fingers in SolidWorks, then 3D-printed and assembled them, so the camera now sits right above the fingers. I also built a servo-driven gripper prototype with current sensing that stops automatically when it grips an object, and routed the gripper air lines through the robot's built-in supply to keep the arm free of external cables. The long-term goal is to connect visual perception with robotic control to enable precise and reliable surgical instrument handling.</p>
             <div class="tech-tags" style="margin-top: 12px;">
                 <span class="tag">KUKA Robotics</span>
                 <span class="tag">ROS 2</span>
@@ -638,28 +638,24 @@ header h1 {
                 <img src="iipp4.jpg" alt="IIPP photo 4">
             </div>
         </div>
-    </div>
-
-    <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); margin-top: 18px;">
         <div class="project-card">
-            <div class="project-media" onclick="openLightboxVideo('iipp_voice_demo.mp4')">
-                <video autoplay loop muted playsinline preload="auto">
-                    <source src="iipp_voice_demo.mp4" type="video/mp4">
-                </video>
+            <div class="project-media" style="cursor: default;">
+                <img src="iipp5.jpg" alt="IIPP photo 5">
             </div>
         </div>
         <div class="project-card">
-            <div class="project-media" onclick="openLightboxVideo('iipp_pneumatic_test.mp4')">
-                <video autoplay loop muted playsinline preload="auto">
-                    <source src="iipp_pneumatic_test.mp4" type="video/mp4">
-                </video>
+            <div class="project-media" style="cursor: default;">
+                <img src="iipp6.jpg" alt="IIPP photo 6">
             </div>
         </div>
         <div class="project-card">
-            <div class="project-media" onclick="openLightboxVideo('iipp_servo_gripper.mp4')">
-                <video autoplay loop muted playsinline preload="auto">
-                    <source src="iipp_servo_gripper.mp4" type="video/mp4">
-                </video>
+            <div class="project-media" style="cursor: default;">
+                <img src="iipp7.jpg" alt="IIPP photo 7">
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-media" style="cursor: default;">
+                <img src="iipp8.jpg" alt="IIPP photo 8">
             </div>
         </div>
     </div>
@@ -875,22 +871,6 @@ header h1 {
                         </div>
                     </div>
                 </article>
-        
-                <article class="project-card">
-                            <div class="project-media" onclick="openLightboxGallery('debate')">
-                                <img src="debate.jpg" alt="Manas University Debate Club">
-                                <div class="gallery-indicator">Gallery</div>
-                            </div>
-                            <div class="project-content">
-                                <h3>Manas University Debate Club</h3>
-                                <p>Mentored new members, organized national tournaments, and trained students in communication and argumentation. </p>
-                                <div class="tech-tags">
-                                    <span class="tag">SMM</span>
-                                    <span class="tag">Leadership</span>
-                                    <span class="tag">Mentoring</span>
-                                </div>
-                            </div>
-                        </article>
             </div>
         </section>
 
@@ -932,34 +912,22 @@ header h1 {
         <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); margin-top: 24px; margin-bottom: 56px;">
             <div class="project-card">
                 <div class="project-media" style="cursor: default;">
-                    <img src="Screenshot 2026-04-17 163346.png" alt="Cycloidal Drive">
-                </div>
-                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
-                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Robotic Manipulator</p>
+                    <img src="op1.png" alt="Robotic manipulator photo 1">
                 </div>
             </div>
             <div class="project-card">
                 <div class="project-media" style="cursor: default;">
-                    <img src="Screenshot 2026-04-05 093515.png" alt="Robotic Manipulator">
-                </div>
-                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
-                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Cycloidal Drive</p>
+                    <img src="op2.png" alt="Robotic manipulator photo 2">
                 </div>
             </div>
             <div class="project-card">
                 <div class="project-media" style="cursor: default;">
-                    <img src="Screenshot 2026-04-17 161032.png" alt="Electronics">
-                </div>
-                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
-                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Cycloidal Drive</p>
+                    <img src="op3.png" alt="Robotic manipulator photo 3">
                 </div>
             </div>
             <div class="project-card">
                 <div class="project-media" style="cursor: default;">
-                    <img src="Screenshot 2026-04-24 155041.png" alt="Assembly">
-                </div>
-                <div class="project-content" style="text-align: center; padding: 10px 16px 14px;">
-                    <p style="font-size: 0.92rem; color: var(--muted); font-weight: 600;">Assembly</p>
+                    <img src="op4.png" alt="Robotic manipulator photo 4">
                 </div>
             </div>
         </div>
@@ -1213,7 +1181,6 @@ header h1 {
         fantomat: ['fantomat1.jpg', 'fantomat2.jpg'],
         university: ['uni1.jpg', 'uni2.jpg', 'uni3.jpg'],
         huawei: ['sftf3.jpg', 'sftf2.jpg', 'sftf8.jpg', 'sftf9.jpg', 'sftf5.jpg', 'sftf1.jpg', 'sftf7.jpg', 'sftf4.jpg', 'sftf6.jpg'],
-        debate: ['debate.jpg', 'debate4.jpg', 'debate2.jpg', 'debate1.jpg', 'debate5.jpg'],
         romer3d: ['romer_3d_1.jpg', 'romer_3d_2.jpg', 'romer_3d_3.jpg', 'romer_3d_4.jpg', 'romer_3d_5.jpg', 'romer_3d_6.jpg', 'romer_3d_7.jpg', 'romer_3d_8.jpg'],
         romerrl: ['romer_rl_1.jpg', 'romer_rl_2.jpg', 'romer_rl_3.jpg', 'romer_rl_4.jpg', 'romer_rl_5.jpg', 'romer_rl_6.jpg', 'romer_rl_7.jpg', 'romer_rl_8.jpg']
     };
