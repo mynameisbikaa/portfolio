@@ -424,6 +424,13 @@ header h1 {
         #about .section-intro {
     color: #111;
 }
+        .about-row{ display:flex; gap:32px; align-items:flex-start; }
+        .about-text{ flex:1; min-width:0; }
+        .about-photo{ width:300px; height:300px; aspect-ratio:1/1; object-fit:cover; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.12); flex-shrink:0; margin-top:12px; }
+        @media (max-width:900px){
+            .about-row{ flex-direction:column; align-items:center; gap:16px; }
+            .about-photo{ width:100%; max-width:320px; height:auto; }
+        }
 
 
     </style>
@@ -463,6 +470,8 @@ header h1 {
      <section id="about">
   <h2>About Me</h2>
 
+  <div class="about-row">
+  <div class="about-text">
   <p class="section-intro">
     I'm a third-year Electrical and Electronics Engineering student at Kyrgyz-Turkish Manas University in Bishkek.
     I'm passionate about robotics, embedded systems, and the creative side of engineering - turning ideas into real, working prototypes.
@@ -481,26 +490,11 @@ header h1 {
   <p class="section-intro">
     For now, I'm focused on learning, experimenting, and growing with every project I take on.
   </p>
+  </div>
+  <img class="about-photo" src="bika.jpg" alt="Aibike Moldobaeva">
+  </div>
          
- <!-- Self Introduction Video Box -->
-<section id="self-intro-video">
-    <h2>Self Introduction </h2>
-   <div class="presentation-box" style="background:#669BBC; max-width:650px; margin:0 auto;">
-        <div class="presentation-text">
-            <h3>Watch My Personal Introduction</h3>
-            <p>Learn more about my journey, projects, and aspirations through this short video.</p>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); margin: 12px auto 0 auto; max-width: 550px;">
-                <iframe 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-                    src="https://www.youtube.com/embed/CVLQwrgJHT8?rel=0&modestbranding=1" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-    </div>
-</section>
+
          
             <p class="section-intro">Moments from various activities, competitions, and university life.</p>
             <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr));">
@@ -701,12 +695,32 @@ header h1 {
     </div>
 </section>
         
+<!-- Self Introduction Video Box -->
+<section id="self-intro-video">
+    <h2>Self Introduction </h2>
+   <div class="presentation-box" style="background:#669BBC; max-width:650px; margin:0 auto;">
+        <div class="presentation-text">
+            <h3>Watch My Personal Introduction</h3>
+            <p>Learn more about my journey, projects, and aspirations through this short video.</p>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); margin: 12px auto 0 auto; max-width: 550px;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                    src="https://www.youtube.com/embed/CVLQwrgJHT8?rel=0&modestbranding=1" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="experience">
     <h2>Experience</h2>
     <p class="section-intro">Click images/videos to view in full screen :)</p>
 
     <div class="experience-item">
-        <div class="exp-media large-video" onclick="openLightboxVideo('фаблабвидео.mp4')">
+        <div class="exp-media" onclick="openLightboxVideo('фаблабвидео.mp4')">
             <video 
                 autoplay
                 loop
